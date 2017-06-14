@@ -174,4 +174,53 @@ class Consultas extends Conexion
 			exit;
 		}
 	}
+	public function ObtenerFila()
+	{
+		try 
+		{
+			$Columnas = '';
+			$Cadena = '';
+			$Matriz = array(array());
+			$Contador = 0;
+			if (is_array($this->Datos)) 
+			{
+				foreach ($this->Datos as $Nombre) 
+				{
+					$Columnas = $Columnas.$Nombre.", ";
+				}
+				$Columnas = substr($Columnas, 0, -2);
+			}
+			else
+			{
+				$Columnas = $this->Datos;
+			}
+			foreach ($this->Condicion as $Sentencia) 
+			{
+				$Cadena = $Cadena.$Sentencia[0].$Sentencia[1]."'".$Sentencia[2]."'"." AND ";
+			}
+			$Cadena = substr($Cadena, 0, -4);
+			$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $Cadena";
+			$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
+			$this->Comando = $this->Ejecutar($NumeroDeColumnas,'');
+			while($datos = $this->Comando->fetch())
+			{			
+				$NumeroDeColumnas = $datos[0];
+			}
+			$this->Comando = $this->Ejecutar($Consulta,'');
+			while($datos = $this->Comando->fetch())
+			{			
+				for ($i=0; $i < $NumeroDeColumnas; $i++) 
+				{ 
+					$Matriz[$Contador][$i] = $datos[$i];
+				}
+				++$Contador;
+			}
+			return $Matriz;
+		}
+		catch (PDOException $ex) 
+		{
+			echo $ex->getMessage();
+			exit;
+		}
+	}
 }
