@@ -41,7 +41,6 @@ html {
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
 }
 
 html,
@@ -207,7 +206,6 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
-  -moz-appearance: button;
   cursor: pointer;
 }
 
@@ -230,8 +228,6 @@ input[type="search"] {
 }
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-moz-search-cancel-button,
-input[type="search"]::-moz-search-decoration
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -324,8 +320,6 @@ form textarea {
   border-radius: 3px;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .button.muted, form input.muted[type="submit"], form button.muted, form input.muted[type="reset"] {
   background-color: #e5e5e5;
@@ -404,12 +398,9 @@ form textarea {
   padding: 30px;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
   -webkit-transform: translateY(-100px);
       -ms-transform: translateY(-100px);
           transform: translateY(-100px);
-  -moz-transform: translateY(-100px);        
 }
 @media screen and (max-width: 640px) {
   .popup {
@@ -426,8 +417,6 @@ form textarea {
   opacity: 1;
   z-index: 999999;
   -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
@@ -576,8 +565,6 @@ form textarea {
   /* 20 */
   background-color: #fff;
   -webkit-animation: imagelightbox-loading .5s ease infinite;
-    -moz-animation: imagelightbox-loading .5s ease infinite;
-
   animation: imagelightbox-loading .5s ease infinite;
 }
 
@@ -641,8 +628,6 @@ form textarea {
   right: 2.5em;
   /* 40 */
   -webkit-transition: color .3s ease;
-    -moz-transition: color .3s ease;
-
   transition: color .3s ease;
 }
 
@@ -665,16 +650,12 @@ form textarea {
 
 #imagelightbox-close:before {
   -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 #imagelightbox-close:after {
   -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
@@ -706,8 +687,6 @@ form textarea {
   padding: 0.313em;
   /* 5 */
   -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -798,8 +777,6 @@ form textarea {
 #imagelightbox-nav,
 .imagelightbox-arrow {
   -webkit-animation: fade-in .25s linear;
-    -moz-animation: fade-in .25s linear;
-
   animation: fade-in .25s linear;
 }
 
@@ -2009,9 +1986,7 @@ form textarea {
  */
 .site-header {
   background: -webkit-radial-gradient(center, circle, #2b2b2b 0%, #C40000 100%);
-    /*background: -webkit-linear-gradient(top, #C40000 0%, #2b2b2b 100%);8*/
-
-  background: -moz-radial-gradient(center, circle, #2b2b2b 0%, #C40000 100%);
+  /*background: -webkit-linear-gradient(top, #C40000 0%, #2b2b2b 100%);8*/
   position: relative;
 }
 .site-header > .container {
@@ -2162,8 +2137,6 @@ form textarea {
   position: relative;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .main-navigation > .menu li a:after {
   content: "|";
@@ -2250,8 +2223,6 @@ form textarea {
   box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: .3s ease;
           transition: .3s ease;
-   -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .search-form input:hover, .search-form input:focus {
   background-color: white;
@@ -2265,8 +2236,6 @@ form textarea {
   margin-left: 20px;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 @media screen and (max-width: 640px) {
   .right-section a {
@@ -2471,9 +2440,6 @@ form textarea {
   color: #666a6c;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;
-}        
 }
 .product-list .product .product-title a:hover {
   color: #C40000;
@@ -2710,8 +2676,6 @@ table.cart .fa-times {
   color: #898e90;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .site-footer a:hover {
   color: #C40000;
@@ -2751,8 +2715,6 @@ table.cart .fa-times {
   margin-right: 10px;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .site-footer .newsletter-form input[type="text"]:hover, .site-footer .newsletter-form input[type="text"]:focus {
   border-color: #C40000;
@@ -2762,8 +2724,6 @@ table.cart .fa-times {
   border: 2px solid #C40000;
   -webkit-transition: .3s ease;
           transition: .3s ease;
-  -moz-transition: .3s ease;
-          transition: .3s ease;        
 }
 .site-footer .newsletter-form input[type="submit"]:hover, .site-footer .newsletter-form input[type="submit"]:focus {
   background-color: #c53e3e;
