@@ -285,7 +285,7 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: #C40000;
+  color: #bbb;
 }
 
 address {
@@ -2304,6 +2304,14 @@ form textarea {
   margin-bottom: 30px;
   background: #2b2b2b;
 }
+.home-slider .iframe-video {
+  float: right;
+  border: 0px solid white;
+  border-radius: 5px;
+  max-width: 100%;
+  width:560 
+  height:315
+}
 .home-slider .slides {
   *zoom: 1;
 }
@@ -2376,9 +2384,10 @@ form textarea {
   color: #C40000;
   margin-bottom: 30px;
   display: block;
+  left: 50px ;
 }
 .home-slider p {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .home-slider .slide-image {
   float: right;
