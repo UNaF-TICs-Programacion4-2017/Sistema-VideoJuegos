@@ -7,6 +7,7 @@ class Consultas extends Conexion
 	public $Condicion;
 	//Metodos
 	//Hello WOLRD
+	//CHAUUU
 	private function Ejecutar($ConsultaSQL, $Vector)
 	{
 		try 
