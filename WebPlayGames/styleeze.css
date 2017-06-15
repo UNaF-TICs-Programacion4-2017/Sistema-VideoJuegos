@@ -2170,21 +2170,24 @@ form textarea {
   content: "|";
   position: absolute;
   right: 0;
-  color: #ddd;
+  color: #666a6c;
   font-weight: 300;
 }
 .main-navigation > .menu li.home {
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
+  color: #666a6c;
 }
 .main-navigation > .menu li.home a {
   padding: 30px 0;
   position: static;
+  color: #666a6c;
 }
 .main-navigation > .menu li.home a:after {
   position: absolute;
   right: 0;
+  color: #666a6c;
 }
 .main-navigation > .menu li.current-menu-item a, .main-navigation > .menu li:hover a {
   color: #C40000;
