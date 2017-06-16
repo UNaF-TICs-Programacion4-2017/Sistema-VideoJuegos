@@ -65,10 +65,16 @@ a:focus {
 a:hover, a:active {
   outline: 0;
 }
-
+@font-face {
+  font-family: pricedown;
+  src:url(fonts/pricedown.ttf);
+  font-weight:normal
+}
 h1 {
+  font-family:pricedown;
   font-size: 2em;
   margin: 0.67em 0;
+  font-weight:normal
 }
 
 h2 {
@@ -226,6 +232,10 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
+    -moz-box-sizing: textfield;
+      -moz-box-sizing: border-box;
+
+
   box-sizing: content-box;
 }
 
@@ -264,7 +274,7 @@ body {
   color: #C40000;
   font-family: "Roboto", "Open Sans", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
 }
 
@@ -528,7 +538,7 @@ form textarea {
   color: #C40000;
   font-size: 30px;
   font-size: 2.1428571429em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 /* IMAGE LIGHTBOX SELECTOR */
@@ -2008,10 +2018,10 @@ form textarea {
  * Header Styles
  */
 .site-header {
-  background: -webkit-radial-gradient(center, circle, #2b2b2b 0%, #C40000 100%);
+  background: -webkit-radial-gradient(center, circle, #2b2b2b 15%, #C40000 100%);
     /*background: -webkit-linear-gradient(top, #C40000 0%, #2b2b2b 100%);8*/
 
-  background: -moz-radial-gradient(center, circle, #2b2b2b 0%, #C40000 100%);
+  background: -moz-radial-gradient(center, circle, #2b2b2b 15%, #C40000 100%);
   position: relative;
 }
 .site-header > .container {
@@ -2064,34 +2074,35 @@ form textarea {
   margin-right: 10px;  
   position:absolute;
   left:50%;
-  top:60%;
+  top:65%;
   margin-left:-170px;
   margin-top:-60px;
 }
 #branding .site-title {
   font-size: 16px;
-  font-size: 1.5428571429em;
+  font-size: 3.8428571429em;
   color: white;
   margin-bottom: 0;
-  width:200px;
+  width:400px;
   height:100px;
   position:absolute;
   left:50%;
   top:60%;
   margin-left:-100px;
-  margin-top:-50px;
+  margin-top:-60px;
+  font-weight:normal
 }
 #branding .site-title a {
   color: white;
 }
 #branding .site-description {
   font-size: 10px;
-  font-size: 0.9142857143em;
-   width:200px;
+  font-size: 1.0142857143em;
+   width:300px;
   height:100px;
   position:absolute;
   left:50%;
-  top:60%;
+  top:67%;
   margin-left:-100px;
   margin-top:-20px;
 }
@@ -2253,8 +2264,7 @@ form textarea {
   border-bottom-right-radius: 3px;
   box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: .3s ease;
-          transition: .3s ease;
-   -moz-transition: .3s ease;
+  -moz-transition: .3s ease;
           transition: .3s ease;        
 }
 .search-form input:hover, .search-form input:focus {
@@ -2478,7 +2488,7 @@ form textarea {
   color: #666a6c;
   margin: 0;
   text-align: left;
-  font-weight: 400;
+  font-weight: 300;
 }
 .product-list .product .product-title a {
   color: #666a6c;
@@ -2534,7 +2544,7 @@ section header .all {
 .page .entry-title {
   font-size: 60px;
   font-size: 4.2857142857em;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 .page .price {
@@ -2618,7 +2628,7 @@ section header .all {
   margin: 30px 0 30px 30px;
 }
 .page h1, .page h2, .page h3, .page h4, .page h5, .page h6 {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 table.cart {
@@ -2654,7 +2664,7 @@ table.cart .product-thumbnail img {
   display: block;
 }
 table.cart .product-title {
-  font-weight: 400;
+  font-weight: 300;
 }
 table.cart .fa-times {
   color: #da7e7e;
@@ -2736,7 +2746,7 @@ table.cart .fa-times {
   color: white;
   font-size: 15px;
   font-size: 1.0714285714rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 .site-footer .colophon {
   margin-top: 80px;
