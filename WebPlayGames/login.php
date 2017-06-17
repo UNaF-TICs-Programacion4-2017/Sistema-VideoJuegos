@@ -14,7 +14,7 @@ if ($_POST['user_ingresar'] <> '' && $_POST['pass_ingresar'] <> '')
 	$BDPass = $Consulta[0][1];
 	if ($BDUser == $User && $BDPass == $Pass) 
 	{
-		$_SESSION['username'] = $BDPass;
+		$_SESSION['username'] = $BDUser;
 		header('location: index-logged.php');
 	}
 	else
