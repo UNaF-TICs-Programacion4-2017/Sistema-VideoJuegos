@@ -1,3 +1,7 @@
+<?php 
+	include 'PHP/Clases.php'; 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -24,9 +28,11 @@
 
 
 	<body class="slider-collapse">
-		
+
 		<div id="site-content">
+
 			<div class="site-header">
+
 				<div class="container">
 					<a href="index.php" id="branding">
 						<img src="images/logo.png" alt="" class="logo">
@@ -35,11 +41,14 @@
 							<small class="site-description">Tagline goes here</small>
 						</div>
 					</a> <!-- #branding -->
-
+					<div class="left-section pull-left">
+						<div class="widget">
+							<h3 class="widget-title"> Bienvenido: <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></h3>
+						</div>
+					</div>
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#">My Account</a>
-						<a href="#">Logout <small>(John Smith)</small></a>
+						<a href="index.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
@@ -294,7 +303,7 @@
 								</form>
 							</div> <!-- .widget -->
 						</div> <!-- column -->
-					</div><!-- .row -->
+					</div><!-- .row --> 
 
 					<div class="colophon">
 						<div class="copy">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</div>
