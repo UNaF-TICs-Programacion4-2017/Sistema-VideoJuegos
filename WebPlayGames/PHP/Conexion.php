@@ -22,7 +22,7 @@ class Conexion
 		try 
 		{
 			$this->Host = 'localhost';
-			$this->BaseDeDatos = 'alumnos';
+			$this->BaseDeDatos = 'playgamesdb';
 			$this->Usuario = 'root';
 			$this->Contraseña = '';
 			$this->Conectarse();
@@ -43,7 +43,7 @@ class Conexion
 			exit;
 		}
 	}
-	private function ComprobarDatos()
+	public function ComprobarDatos()
 	{
 		$Validar = false;
 		foreach ($this->Datos as $Key => $Valor) 
@@ -64,21 +64,24 @@ class Conexion
 	{
 		try 
 		{
-			if ($this->ComprobarDatos($this->Datos) == true) 
+			$Variables = array();
+			$Valores = "NULL";
+			print_r($this->Datos);
+			foreach ($this->Datos as $Key => $Valor) 
 			{
-				$Variables = array();
-				$Valores = "NULL";
-				foreach ($this->Datos as $Key => $Valor) 
+				$Valores = $Valores.",?";
+				if (isset($_POST[$Valor]))
 				{
-					$Valores = $Valores.",?";
-					if (isset($_POST[$this->Datos[$Key]])) 
-					{
-						$Variables[] = $_POST[$Valor];
-					}
+					$Variables[] = $_POST[$Valor];
 				}
-				$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
-				$this->Ejecutar($Insertar, $Variables);
+				elseif ($Key == 'v') 
+				{
+					$Variables[] = $Valor;
+				}
 			}
+			print_r($Variables);
+			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
+			$this->Ejecutar($Insertar, $Variables);
 		}
 		catch (PDOException $ex) 
 		{

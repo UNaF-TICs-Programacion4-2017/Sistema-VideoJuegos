@@ -1,3 +1,4 @@
+<?php include 'PHP/Clases.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -24,7 +25,6 @@
 
 
 	<body class="slider-collapse">
-		
 		<div id="site-content">
 			<div class="site-header">
 				<div class="container">
@@ -38,7 +38,7 @@
 
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#" class="login-button">Login/Register</a>
+						<a href="#" class="login-button">Ingresar/Registrarse</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
@@ -315,30 +315,36 @@
 			<a href="#" class="close"><i class="fa fa-times"></i></a>
 			<div class="row">
 				<div class="col-md-6">
-					<h2 class="section-title">Login</h2>
-					<form action="#">
-						<input type="text" placeholder="Username...">
-						<input type="password" placeholder="Password...">
-						<input type="submit" value="Login">
+					<h2 class="section-title">Ingresar</h2>
+					<form action="login.php" method="POST">
+						<input type="text" placeholder="Ingrese usuario..." name="user_ingresar">
+						<input type="password" placeholder="Ingrese contraseña..." name="pass_ingresar">
+						<input type="submit" value="Ingresar">
 					</form>
 				</div> <!-- .column -->
 				<div class="col-md-6">
-					<h2 class="section-title">Create an account</h2>
-					<form action="#">
-						<input type="text" placeholder="Username...">
-						<input type="text" placeholder="Email address...">
-						<input type="submit" value="register">
+					<h2 class="section-title">Crear una cuenta</h2>
+					<form action="" method="POST">
+						<input type="text" placeholder="Ingrese usuario..." name="user">
+						<input type="password" placeholder="Ingrese contraseña..." name="password">
+						<input type="submit" value="Registrar">
 					</form>
 				</div> <!-- .column -->
 			</div> <!-- .row -->
 		</div> <!-- .auth-popup -->
-
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
-
-		<script src="js/app.js"></script>
-
-		
+		<script src="js/app.js"></script>	
 	</body>
 
 </html>
+<?php
+	$Registro = new Conexion();
+	$Registro->Tabla = 'usuario';
+	$Registro->Datos = array('user','password');
+	if ($Registro->ComprobarDatos() == true) 
+	{
+		$Registro->Datos = array('user','password','v'=>'1');
+		$Registro->Insertar();	
+	}
+?>
