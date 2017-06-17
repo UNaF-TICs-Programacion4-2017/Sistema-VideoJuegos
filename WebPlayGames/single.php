@@ -5,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Ecommerce Video Game | Products</title>
+		<title>Ecommerce Video Game | Single</title>
 
 		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700|" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
 
@@ -28,16 +28,16 @@
 		<div id="site-content">
 			<div class="site-header">
 				<div class="container">
-					<a href="index.html" id="branding">
+					<a href="index.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
 						<div class="logo-text">
-							<h1 class="site-title">PLAY GAMES</h1>
-							<small class="site-description">Venta de Videojuegos y Accesorios</small>
+							<h1 class="site-title">PLAY GAMES FORMOSA</h1>
+							<small class="site-description">Venta y Canje de VideoJuegos</small>
 						</div>
 					</a> <!-- #branding -->
 
 					<div class="right-section pull-right">
-						<a href="cart.html" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
+						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
 						<a href="#">My Account</a>
 						<a href="#">Logout <small>(John Smith)</small></a>
 					</div> <!-- .right-section -->
@@ -45,180 +45,136 @@
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.html"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.html">Accesorios</a></li>
-							<li class="menu-item"><a href="products.html">Promociones</a></li>
-							<li class="menu-item"><a href="products.html">Playstation</a></li>
-							<li class="menu-item"><a href="products.html">Xbox</a></li>
-							<li class="menu-item"><a href="products.html">Nintendo</a></li>
+							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
+							<li class="menu-item"><a href="products.php">Accesorios</a></li>
+							<li class="menu-item"><a href="products.php">Consolas</a></li>
+							<li class="menu-item"><a href="products.php">Playstation</a></li>
+							<li class="menu-item"><a href="products.php">Xbox</a></li>
+							<li class="menu-item"><a href="products.php">Nintendo</a></li>
+							<li class="menu-item"><a href="products.php">Merchandising</a></li>
+							<li class="menu-item"><a href="products.php">Figuras de Accion</a></li>
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
-							<input type="text" placeholder="Buscar...">
+							<input type="text" placeholder="Search...">
 						</div> <!-- .search-form -->
 
 						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
 					</div> <!-- .main-navigation -->
 
-
+					
 				</div> <!-- .container -->
 			</div> <!-- .site-header -->
+			
 			<main class="main-content">
 				<div class="container">
 					<div class="page">
-						<div class="filter-bar">
-							<div class="filter">
-								<span>
-									<label>Sort by:</label>
-									<select name="#">
-										<option value="#">Popularity</option>
-										<option value="#">Highest Rating</option>
-										<option value="#">Lowest price</option>
-									</select>
-								</span>
-								<span>
-									<label>Genre</label>
-									<select name="#">
-										<option value="#">Show All</option>
-										<option value="#">Action</option>
-										<option value="#">Racing</option>
-										<option value="#">Strategy</option>
-									</select>
-								</span>
-								<span>
-									<label>Show:</label>
-									<select name="#">
-										<option value="#">8</option>
-										<option value="#">16</option>
-										<option value="#">24</option>
-									</select>
-								</span>
-							</div> <!-- .filter -->
-
-							<div class="pagination">
-								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
-								<span class="page-number current">1</span>
-								<a href="#" class="page-number">2</a>
-								<a href="#" class="page-number">3</a>
-								<a href="#" class="page-number">...</a>
-								<a href="#" class="page-number">12</a>
-								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
-							</div> <!-- .pagination -->
-						</div> <!-- .filter-bar -->
 						
-						<div class="product-list">
+						<div class="entry-content">
+							<div class="row">
+								<div class="col-sm-6 col-md-4">
+									<div class="product-images">
+										<figure class="large-image">
+											<a href="dummy/image-1.jpg"><img src="dummy/single-game-cover.jpg" alt=""></a>
+										</figure>
+										<div class="thumbnails">
+											<a href="dummy/image-2.jpg"><img src="dummy/small-thumb-1.jpg" alt=""></a>
+											<a href="dummy/image-3.jpg"><img src="dummy/small-thumb-2.jpg" alt=""></a>
+											<a href="dummy/image-4.jpg"><img src="dummy/small-thumb-3.jpg" alt=""></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-8">
+									<h2 class="entry-title">Need for Speed Rivals</h2>
+									<small class="price">$190.00</small>
+
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+									<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
+
+									<div class="addtocart-bar">
+										<form action="#">
+											<label for="#">Quantity</label>
+											<select name="#">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+											<input type="submit" value="Add to cart">
+										</form>
+
+										<div class="social-links square">
+											<strong>Share</strong>
+											<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+											<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+											<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+											<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<section>
+							<header>
+								<h2 class="section-title">Similiar Product</h2>
+							</header>
+							<div class="product-list">
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-1.jpg" alt="Game 1"></a>
+											<img src="dummy/game-1.jpg" alt="Game 1">
 										</div>
 										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
+										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
 										<a href="#" class="button">Add to cart</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
-
+							
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-2.jpg" alt="Game 2"></a>
+											<img src="dummy/game-2.jpg" alt="Game 2">
 										</div>
 										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
+										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
 										<a href="#" class="button">Add to cart</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
-
+							
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-3.jpg" alt="Game 3"></a>
+											<img src="dummy/game-3.jpg" alt="Game 3">
 										</div>
 										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
+										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
 										<a href="#" class="button">Add to cart</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
-
+							
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-4.jpg" alt="Game 4"></a>
+											<img src="dummy/game-4.jpg" alt="Game 4">
 										</div>
 										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
+										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
 										<a href="#" class="button">Add to cart</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
 								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-5.jpg" alt="Game 1"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Watch Dogs</a></h3>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-6.jpg" alt="Game 2"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Mortal Kombat X</a></h3>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-7.jpg" alt="Game 3"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.html"><img src="dummy/game-8.jpg" alt="Game 4"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Nascar '14</a></h3>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-						</div> <!-- .product-list -->
+							</div> <!-- .product-list --></section>
 
-						<div class="pagination-bar">
-							<div class="pagination">
-								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
-								<span class="page-number current">1</span>
-								<a href="#" class="page-number">2</a>
-								<a href="#" class="page-number">3</a>
-								<a href="#" class="page-number">...</a>
-								<a href="#" class="page-number">12</a>
-								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
-							</div> <!-- .pagination -->
-						</div>
+						
 					</div>
 				</div> <!-- .container -->
 			</main> <!-- .main-content -->
