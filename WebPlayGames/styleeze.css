@@ -2076,7 +2076,7 @@ form textarea {
   left:50%;
   top:65%;
   margin-left:-170px;
-  margin-top:-85px;
+  margin-top:-60px;
 }
 #branding .site-title {
   font-size: 16px;
@@ -2089,7 +2089,7 @@ form textarea {
   left:50%;
   top:60%;
   margin-left:-100px;
-  margin-top:-84px;
+  margin-top:-60px;
   font-weight:normal
 }
 #branding .site-title a {
@@ -2104,7 +2104,7 @@ form textarea {
   left:50%;
   top:67%;
   margin-left:-100px;
-  margin-top:-45px;
+  margin-top:-20px;
 }
 
 .main-navigation {
