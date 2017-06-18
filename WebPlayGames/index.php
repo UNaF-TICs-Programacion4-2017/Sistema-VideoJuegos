@@ -105,8 +105,36 @@
 								
 							</div>
 
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/QkkoHAzjnUs" frameborder="0" allowfullscreen class="iframe-video"></iframe>						</div>
-					</li>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/QkkoHAzjnUs" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
+						</div>		
+					<li data-bg-image="dummy/slide-3.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">Dirt Rally</h2>
+								<small class="slide-subtitle">$1.500</small>
+								
+								<p>Dirt Rally (escrito como DiRT Rally) es un videojuego de carreras desarrollado y publicado por Codemasters para Windows de Microsoft. Una versión de acceso anticipado del juego se liberó el 27 de abril de 2015, a través del servicio de distribución digital Steam. La versión final del juego se publicó el 7 de diciembre de 2015. El juego se publicó para las consolas de octava generación PlayStation 4 y Xbox One el 5 de abril de 2016. Está anunciada la versión para Linux/SteamOS.</p>
+								
+								<a href="cart.php" class="button">Reservar</a>
+								
+							</div>
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/3j7T6-YPXMQ" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
+						</div>
+						<li data-bg-image="dummy/slide-3.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">Forza Horizon 3</h2>
+								<small class="slide-subtitle">$1.500</small>
+								
+								<p>Forza Horizon 3 es un videojuego de carreras de mundo abierto desarrollado por Playground Games y Turn 10 Studios y distribuido por Microsoft Studios para Xbox One y Microsoft Windows 10. Fue revelado en el E3 2016 el 14 de junio de 2016. Es el tercer título de la saga Forza Horizon y estará ambientado en Australia.</p>
+								
+								<a href="cart.php" class="button">Reservar</a>
+								
+							</div>
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/vD1ccSM9qiA" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
+						</div>
 				</ul> <!-- .slides -->
 			</div> <!-- .home-slider -->
 

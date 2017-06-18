@@ -31,8 +31,8 @@
 					<a href="index.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
 						<div class="logo-text">
-							<h1 class="site-title">PLAY GAMES FORMOSA</h1>
-							<small class="site-description">Venta y Canje de VideoJuegos</small>
+							<h1 class="site-title">PLAY GAMES</h1>
+							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -94,13 +94,13 @@
 
 									<div class="addtocart-bar">
 										<form action="#">
-											<label for="#">Quantity</label>
+											<label for="#">Cantidad</label>
 											<select name="#">
 												<option value="1">1</option>
 												<option value="2">2</option>
 												<option value="3">3</option>
 											</select>
-											<input type="submit" value="Add to cart">
+											<input type="submit" value="Reservar">
 										</form>
 
 										<div class="social-links square">
@@ -117,7 +117,7 @@
 						
 						<section>
 							<header>
-								<h2 class="section-title">Similiar Product</h2>
+								<h2 class="section-title">Otros Productos</h2>
 							</header>
 							<div class="product-list">
 								<div class="product">
@@ -128,7 +128,7 @@
 										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
 										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="#" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -141,7 +141,7 @@
 										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
 										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="#" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -154,7 +154,7 @@
 										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
 										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="#" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -167,7 +167,7 @@
 										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
 										<small class="price">$20.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="#" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
