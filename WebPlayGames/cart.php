@@ -72,9 +72,9 @@
 						<table class="cart">
 							<thead>
 								<tr>
-									<th class="product-name">Product Name</th>
-									<th class="product-price">Price</th>
-									<th class="product-qty">Quantity</th>
+									<th class="product-name">Nombre Producto</th>
+									<th class="product-price">Precio</th>
+									<th class="product-qty">Cantidad</th>
 									<th class="product-total">Total</th>
 									<th class="action"></th>
 								</tr>
@@ -148,11 +148,10 @@
 
 						<div class="cart-total">
 							<p><strong>Subtotal:</strong> $650.00</p>
-							<p><strong>Shipment:</strong> $15.00</p>
-							<p class="total"><strong>Total</strong><span class="num">$665.00</span></p>
+							<p class="total"><strong>Total</strong><span class="num">$650.00</span></p>
 							<p>
-								<a href="#" class="button muted">Continue Shopping</a>
-								<a href="#" class="button">Finalize and pay</a>
+								<a href="#" class="button muted">Continuar Reservando</a>
+								<a href="#" class="button">Finalizar y Reservar</a>
 							</p>
 						</div> <!-- .cart-total -->
 						
