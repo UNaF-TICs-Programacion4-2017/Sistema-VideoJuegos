@@ -310,7 +310,7 @@ DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(25) NOT NULL,
-  `contraseña` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL,
   `rela_tipo_usuario` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_rela_tipo_usuario` (`rela_tipo_usuario`),
