@@ -66,7 +66,6 @@ class Conexion
 		{
 			$Variables = array();
 			$Valores = "NULL";
-			print_r($this->Datos);
 			foreach ($this->Datos as $Key => $Valor) 
 			{
 				$Valores = $Valores.",?";
@@ -79,7 +78,6 @@ class Conexion
 					$Variables[] = $Valor;
 				}
 			}
-			print_r($Variables);
 			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
 			$this->Ejecutar($Insertar, $Variables);
 		}

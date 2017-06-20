@@ -372,7 +372,16 @@
 	$Registro->Datos = array('user','password');
 	if ($Registro->ComprobarDatos() == true) 
 	{
+		$User = $_POST['user'];
+		$ComprobarUser = new Conexion();
+		$ComprobarUser->Tabla = 'usuario';
+		$ComprobarUser->Datos = array('nombre');
+		$ComprobarUser->Condicion = array(array('nombre','=',$User));
+		$Consulta = $ComprobarUser->ObtenerFila();
+		$BDUser = $Consulta[0][0];
 		$Registro->Datos = array('user','password','v'=>'1');
-		$Registro->Insertar();	
+		if (!$BDUser == $User) 
+		{
+			$Registro->Insertar();	
+		}
 	}
-?>
