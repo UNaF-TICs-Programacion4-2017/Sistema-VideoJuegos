@@ -137,6 +137,7 @@ class Conexion
 			exit;
 		}
 	}
+	//No Sirve :P
 	public function ObtenerFila()
 	{
 		try 
