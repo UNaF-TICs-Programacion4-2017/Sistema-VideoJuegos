@@ -22,7 +22,7 @@ class Conexion
 		try 
 		{
 			$this->Host = 'localhost';
-			$this->BaseDeDatos = 'playgamesdb';
+			$this->BaseDeDatos = 'play_games';
 			$this->Usuario = 'root';
 			$this->Contraseña = '';
 			$this->Conectarse();
