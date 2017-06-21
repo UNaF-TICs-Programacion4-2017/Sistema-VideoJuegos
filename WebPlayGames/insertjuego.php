@@ -95,8 +95,13 @@
 										<input type="text" placeholder="Ingresar Nombre">
 									</td>
 									<td class="descripcion-producto">
-										<input type="text" placeholder="Ingresar Descripcion">
+										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
+										<textarea name="" id="" cols="20" rows="5">
+										
+										</textarea>
 									</td>
+
+									
 									<td class="precio-producto">
 										<input type="text" placeholder="Ingresar Precio en $">
 									</td>
