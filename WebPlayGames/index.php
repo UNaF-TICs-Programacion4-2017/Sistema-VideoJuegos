@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="styleeze.css">
 		
 		<!--[if lt IE 9]>
+		Hola mundo
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
