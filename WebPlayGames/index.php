@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="styleeze.css">
 		
 		<!--[if lt IE 9]>
+		Hola mundosdadsdadsasda
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
@@ -349,15 +350,16 @@
 						<input type="password" placeholder="Ingrese contraseña..." name="pass_ingresar">
 						<input type="submit" value="Ingresar">
 					</form>
+
 				</div> <!-- .column -->
 				<div class="col-md-6">
 					<h2 class="section-title">Crear una cuenta</h2>
 					<form action="" method="POST">
 						<input type="text" placeholder="Ingrese usuario..." name="user">
-						<input type="password" placeholder="Ingrese contraseña..." name="password">
+						<input type="password" placeholder="Ingrese contraseña..." name="password" required>
 						<input type="submit" value="Registrar">
 					</form>
-				</div> <!-- .column -->
+				</div> <!-- .column -asasasas->
 			</div> <!-- .row -->
 		</div> <!-- .auth-popup -->
 		<script src="js/jquery-1.11.1.min.js"></script>

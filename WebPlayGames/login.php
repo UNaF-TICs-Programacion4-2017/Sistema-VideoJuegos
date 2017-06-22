@@ -8,7 +8,7 @@ if ($_POST['user_ingresar'] <> '' && $_POST['pass_ingresar'] <> '')
 	$Ingresar = new Conexion();
 	$Ingresar->Tabla = 'usuario';
 	$Ingresar->Datos = array('nombre','password');
-	$Ingresar->Condicion = array(array('nombre','=',$User),array('password','=',$Pass));
+	$Ingresar->Condicion = "nombre = '$User' AND password = '$Pass'";
 	$Consulta = $Ingresar->ObtenerFila();
 	$BDUser = $Consulta[0][0];
 	$BDPass = $Consulta[0][1];
