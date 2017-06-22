@@ -377,7 +377,7 @@
 		$ComprobarUser = new Conexion();
 		$ComprobarUser->Tabla = 'usuario';
 		$ComprobarUser->Datos = array('nombre');
-		$ComprobarUser->Condicion = array(array('nombre','=',$User));
+		$ComprobarUser->Condicion = "nombre = '$User'";
 		$Consulta = $ComprobarUser->ObtenerFila();
 		$BDUser = $Consulta[0][0];
 		$Registro->Datos = array('user','password','v'=>'1');
