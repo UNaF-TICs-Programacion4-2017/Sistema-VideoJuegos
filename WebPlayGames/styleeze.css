@@ -2640,6 +2640,8 @@ table.cart td, table.cart th {
   background: white;
   padding: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  left:50%;
+  top:67%;
 }
 table.cart td:first-child, table.cart th:first-child {
   border-top-left-radius: 3px;
@@ -2718,6 +2720,96 @@ table.cart .fa-times {
   font-weight: 300;
 }
 
+
+table.insert-juego {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  width:55%;
+  margin: 0 0 5px;
+  padding: 0;
+}
+ table.insert-juego th, table.insert-juego td  {
+ background: white;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  
+ 
+}
+
+table.insert-juego td:first-child, table.insert-juego th:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+table.insert-juego td:last-child, table.insert-juego th:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+}
+table.insert-juego .product-thumbnail {
+  float: left;
+  margin-right: 20px;
+  border: 3px solid #e9e9e9;
+  border-radius: 3px;
+}
+table.insert-juego .product-thumbnail img {
+  display: block;
+}
+table.insert-juego .product-title {
+  font-weight: 300;
+}
+table.insert-juego .fa-times {
+  color: #da7e7e;
+}
+@media screen and (max-width: 640px) {
+  table.insert-juego .product-thumbnail {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  table.insert-juego .action {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  table.insert-juego .product-qty {
+    display: none;
+  }
+}
+
+.insert-juego-total {
+  background: white;
+  padding: 20px;
+  width: 370px;
+  float: right;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 480px) {
+  .insert-juego-total {
+    width: 100%;
+    float: none;
+  }
+}
+.insert-juego-total p {
+  font-weight: 700;
+}
+.insert-juego-total p strong {
+  font-weight: 300;
+}
+.insert-juego-total .total {
+  font-size: 30px;
+  font-size: 2.1428571429em;
+}
+.insert-juego-total .total .num {
+  color: #C40000;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.insert-juego-total .button, .insert-juego-total form input[type="submit"], form .insert-juego-total input[type="submit"], .insert-juego-total form button, form .insert-juego-total button, .insert-juego-total form input[type="reset"], form .insert-juego-total input[type="reset"] {
+  font-weight: 300;
+}
 /*
  * Footer Styles
  */
