@@ -7,7 +7,7 @@
 		
 		<title>Ecommerce Video Game | Cart</title>
 
-		<!-- Loading third party fonts -->
+		<!-- Loading third party fonts hola -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700|" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="styleeze.css">
 		
 		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/html5.jssssdfsfdsg"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
