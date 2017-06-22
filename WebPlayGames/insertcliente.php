@@ -225,7 +225,7 @@
 					</form>
 				</div> <!-- .column -->
 			</div> <!-- .row -->
-		</div> <!-- .auth-popup -->
+		</div> <!-- .auth-popup holis-->
 
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
