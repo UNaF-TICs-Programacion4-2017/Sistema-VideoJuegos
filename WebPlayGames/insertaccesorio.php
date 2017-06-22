@@ -70,7 +70,7 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Insertar Juego Nuevo</h2>
+								<h2 class="section-title">Insertar Accesorio Nuevo</h2>
 							</header>
 						<table class="insert-juego">
 							<thead>
@@ -89,26 +89,6 @@
 											<option value="3">Xbox ONE</option>
 											<option value="4">Nintendo Switch</option>
 											<option value="5">Nintendo 3DS</option>
-
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<th class="genero-juego">Genero</th>
-									<td class="genero-juego">
-										<select name="#">
-											<option value="1">Accion</option>
-											<option value="2">Accion-Aventura</option>
-											<option value="3">Aventura</option>
-											<option value="4">Juego de Rol</option>
-											<option value="5">Simulacion</option>
-											<option value="6">Estrategia</option>
-											<option value="7">Deporte</option>
-											<option value="8">Carrera</option>
-											<option value="9">MMO</option>
-											<option value="10">Sandbox</option>
-											<option value="11">Musical</option>
-											<option value="12">Terror</option>
 										</select>
 									</td>
 								</tr>
@@ -119,12 +99,6 @@
 										<textarea name="" id="" cols="60" rows="5">
 										
 										</textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="anio-juego">Anio</th>
-									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio">
 									</td>
 								</tr>
 								<tr>
@@ -170,7 +144,7 @@
 							<tbody>
 								<tr>
 										<td>
-											<a href="#" class="button">Insertar Juego</a>
+											<a href="#" class="button">Insertar Accesorio</a>
 										</td>
 								</tr>
 							</tbody>
