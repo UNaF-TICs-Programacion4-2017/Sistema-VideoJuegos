@@ -360,7 +360,7 @@
 						<input type="submit" value="Registrar">
 					</form>
 				</div> <!-- .column -asasasas->
-			</div> <!-- .rasasasasasow -->
+			</div> <!-- .holis -->
 		</div> <!-- .auth-popup -->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
