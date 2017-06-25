@@ -17,7 +17,7 @@ class Conexion
 		$this->Conexion = new PDO('mysql:host='.$this->Host.';dbname='.$this->BaseDeDatos,$this->Usuario,$this->Contraseña);
 		$this->Conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
-	private function Ejecutar($ConsultaSQL, $Vector)
+	protected function Ejecutar($ConsultaSQL, $Vector)
 	{
 		try 
 		{
@@ -137,34 +137,6 @@ class Conexion
 			exit;
 		}
 	}
-	public function ObtenerConsulta()
-	{
-		try 
-		{
-			$Consulta = "SELECT $Columnas FROM $this->Tabla";
-			$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
-			$this->Comando = $this->Ejecutar($NumeroDeColumnas,'');
-			while($datos = $this->Comando->fetch())
-			{			
-				$NumeroDeColumnas = $datos[0];
-			}
-			$this->Comando = $this->Ejecutar($Consulta,'');
-			while($datos = $this->Comando->fetch())
-			{			
-				for ($i=0; $i < $NumeroDeColumnas; $i++) 
-				{ 
-					$Matriz[$Contador][$i] = $datos[$i];
-				}
-				++$Contador;
-			}
-			return $Matriz;
-		}
-		catch (PDOException $ex) 
-		{
-			echo $ex->getMessage();
-			exit;
-		}
-	}
 	public function ObtenerFila()
 	{
 		try 
@@ -185,11 +157,18 @@ class Conexion
 				$Columnas = $this->Datos;
 			}
 			$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
-			$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
-			$this->Comando = $this->Ejecutar($NumeroDeColumnas,'');
-			while($datos = $this->Comando->fetch())
-			{			
-				$NumeroDeColumnas = $datos[0];
+			if ($Columnas == '*') 
+			{
+				$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
+				$this->Comando = $this->Ejecutar($NumeroDeColumnas,'');
+				while($datos = $this->Comando->fetch())
+				{			
+					$NumeroDeColumnas = $datos[0];
+				}
+			}
+			else
+			{
+				$NumeroDeColumnas = count($this->Datos);
 			}
 			$this->Comando = $this->Ejecutar($Consulta,'');
 			while($datos = $this->Comando->fetch())
@@ -208,14 +187,12 @@ class Conexion
 			exit;
 		}
 	}
-	public function ObtenerFilaArray()
+	public function CantidadRegistro()
 	{
 		try 
 		{
 			$Columnas = '';
-			$Cadena = '';
-			$Matriz = array(array());
-			$Contador = 0;
+			$Cantidad = '';
 			if (is_array($this->Datos)) 
 			{
 				foreach ($this->Datos as $Nombre) 
@@ -228,28 +205,13 @@ class Conexion
 			{
 				$Columnas = $this->Datos;
 			}
-			foreach ($this->Condicion as $Sentencia) 
-			{
-				$Cadena = $Cadena.$Sentencia[0].$Sentencia[1]."'".$Sentencia[2]."'"." AND ";
-			}
-			$Cadena = substr($Cadena, 0, -4);
-			$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $Cadena";
-			$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
-			$this->Comando = $this->Ejecutar($NumeroDeColumnas,'');
-			while($datos = $this->Comando->fetch())
-			{			
-				$NumeroDeColumnas = $datos[0];
-			}
+			$Consulta = "SELECT COUNT($Columnas) FROM $this->Tabla WHERE $this->Condicion";
 			$this->Comando = $this->Ejecutar($Consulta,'');
-			while($datos = $this->Comando->fetch())
-			{			
-				for ($i=0; $i < $NumeroDeColumnas; $i++) 
-				{ 
-					$Matriz[$Contador][$i] = $datos[$i];
-				}
-				++$Contador;
+			while ($datos = $this->Comando->fetch())
+			{
+				$Cantidad = $datos[0];
 			}
-			return $Matriz;
+			return $Cantidad;
 		}
 		catch (PDOException $ex) 
 		{

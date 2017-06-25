@@ -1,10 +1,16 @@
 <?php
 include 'PHP/Clases.php';
 session_start();
-if ($_POST['user_ingresar'] <> '' && $_POST['pass_ingresar'] <> '') 
+$oConexion = new Conexion();
+$oConexion->Datos = array('nombre_apellido','dni','email','fecha_nac','telefono','direccion','userBD','passwordBD');
+if ($oConexion->ComprobarDatos() == true)
 {
-	$User = $_POST['user_ingresar'];
-	$Pass = $_POST['pass_ingresar'];
+	InsertarPersona();
+}
+if ($_POST['userBD'] <> '' && $_POST['passwordBD'] <> '') 
+{
+	$User = $_POST['userBD'];
+	$Pass = $_POST['passwordBD'];
 	$Ingresar = new Conexion();
 	$Ingresar->Tabla = 'usuario';
 	$Ingresar->Datos = array('nombre','password');
