@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Ezequiel</title>
+		<title>Play Games | Inicio</title>
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
@@ -354,8 +354,8 @@
 				</div> <!-- .column -->
 				<div class="col-md-6">
 					<h2 class="section-title">Crear una cuenta</h2>
-					<form action="" method="POST">
-						<input type="text" placeholder="Ingrese usuario..." name="user">
+					<form action="insertcliente.php" method="POST">
+						<input type="text" placeholder="Ingrese usuario..." name="user" required>
 						<input type="password" placeholder="Ingrese contraseña..." name="password" required>
 						<input type="submit" value="Registrar">
 					</form>
@@ -368,22 +368,3 @@
 	</body>
 
 </html>
-<?php
-	$Registro = new Conexion();
-	$Registro->Tabla = 'usuario';
-	$Registro->Datos = array('user','password');
-	if ($Registro->ComprobarDatos() == true) 
-	{
-		$User = $_POST['user'];
-		$ComprobarUser = new Conexion();
-		$ComprobarUser->Tabla = 'usuario';
-		$ComprobarUser->Datos = array('nombre');
-		$ComprobarUser->Condicion = "nombre = '$User'";
-		$Consulta = $ComprobarUser->ObtenerFila();
-		$BDUser = $Consulta[0][0];
-		$Registro->Datos = array('user','password','v'=>'1');
-		if (!$BDUser == $User) 
-		{
-			$Registro->Insertar();	
-		}
-	}
