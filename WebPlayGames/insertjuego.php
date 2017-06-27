@@ -1,3 +1,4 @@
+<?php include 'PHP/Clases.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -72,45 +73,83 @@
 							<header>
 								<h2 class="section-title">Insertar Juego Nuevo</h2>
 							</header>
+							<form method="POST">
 						<table class="insert-juego">
 							<thead>
 								<tr>
 									<th class="nombre-juego">Nombre</th>
 									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre">
+										<input type="text" size="60" placeholder="Ingresar Nombre" name="nombre">
 									</td>
 								</tr>
 								<tr>
 									<th class="consola-juego">Consola</th>
 									<td class="consola-juego">
-										<select name="#">
-											<option value="1">PlayStation 3</option>
-											<option value="2">PlayStation 4</option>
-											<option value="3">Xbox ONE</option>
-											<option value="4">Nintendo Switch</option>
-											<option value="5">Nintendo 3DS</option>
+										<select name="consola">
+											
+                                          <?php
+                                          $oConsola = new Conexion();
+                                          $oConsola->Tabla = 'consola';
+                                          $oConsola->Datos = array('id','descripcion');
 
+                                          $oConsola->Condicion ="id < '100'";
+                                          $Consulta = $oConsola->ObtenerFila();
+                                          $ID = '';
+                                          $Descripcion = '';
+
+                                         foreach ($Consulta as $key => $Columna) 
+                                        {
+
+                                         	foreach ($Columna as $Fila) 
+                                         	{
+                                         		if(!is_numeric($Fila))
+                                         		{
+                                         			$Descripcion = $Fila;
+                                         	    }
+                                         	    else
+                                         	    {
+                                         	    	$ID = $Fila;
+                                         	    }
+                                         	}
+                                         	echo "<option value='$ID'>$Descripcion</option>";
+
+                                         }
+                                          ?>
 										</select>
 									</td>
 								</tr>
 								<tr>
 									<th class="genero-juego">Genero</th>
 									<td class="genero-juego">
-										<select name="#">
+
+										<select name="genero">
 											<?php
-												$oConexion = new Conexion();
-												$oConexion->Tabla = 'genero';
-												$oConexion->Datos = array('descripcion');
-												$oConexion->Condicion = "descripcion <> 'hola'";
-												$Consulta = $oConexion->ObtenerFila();
-												echo "<option>".$Consulta[0][0]."</option>";
-												foreach ($Consulta as $Columnas) 
-												{
-													foreach ($Columnas as $Filas) 
-													{
-														echo "<option>".$Filas."</option>";
-													}
-												}
+                                            $oGenero = new Conexion();
+                                            $oGenero->Tabla ='genero';
+                                            $oGenero->Datos = array('id','descripcion');
+
+                                            $oGenero->Condicion ="id < '100'";
+                                            $Consulta = $oGenero->ObtenerFila();
+                                            $ID='';
+                                            $Descripcion = '';
+                                              foreach ($Consulta as $key => $Columna) 
+                                        {
+
+                                         	foreach ($Columna as $Fila) 
+                                         	{
+                                         		if(!is_numeric($Fila))
+                                         		{
+                                         			$Descripcion = $Fila;
+                                         	    }
+                                         	    else
+                                         	    {
+                                         	    	$ID = $Fila;
+                                         	    }
+                                         	}
+                                         	echo "<option value='$ID'>$Descripcion</option>";
+
+                                         }
+
 											?>
 										</select>
 									</td>
@@ -119,7 +158,7 @@
 									<th class="descripcion-juego">Descripcion</th>
 									<td class="descripcion-juego">
 										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="" id="" cols="60" rows="5">
+										<textarea name="descripcion" id="" cols="60" rows="5">
 										
 										</textarea>
 									</td>
@@ -127,19 +166,19 @@
 								<tr>
 									<th class="anio-juego">Anio</th>
 									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio">
+										<input type="text" size="10" placeholder="Ingresar Anio" name="anio">
 									</td>
 								</tr>
 								<tr>
 									<th class="precio-juego">Precio</th>
 									<td class="precio-juego">
-										<input type="text" size="15" placeholder="Ingresar Precio en $">
+										<input type="text" size="15" placeholder="Ingresar Precio en $" name="precio">
 									</td>
 								</tr>
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="#">
+										<select name="cantidad">
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -156,30 +195,39 @@
 								<tr>
 									<th class="linkyoutube-juego">Link YouTube</th>
 									<td class="linkyoutube-juego">
-										<input type="text" size="60" placeholder="Ingresar URL YouTube">
+										<input type="text" size="60" placeholder="Ingresar URL YouTube" name="linkyoutube">
 									</td>
 								</tr>
 
 								<tr>
 									<th class="imagen-juego">Imagen</th>
 									<td>
-										<form enctype="multipart/form-data" action="uploader.php" method="POST">
-										<input name="uploadedfile" type="file" />
+										
+										<input name="imagen" type="file" / >
 										<input type="submit" value="Subir archivo" />
-										</form>
+										
 									</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 										<td>
-											<a href="#" class="button">Insertar Juego</a>
+											<input type="submit" value="Cargar Datos">
 										</td>
 								</tr>
 							</tbody>
 							
 						</table> 
-
+                            </form>
+                            <?php
+                            $Rela_tipo_producto = '1';
+                            $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
+                            //echo var_dump($fecha);
+                            $Usuario = new Conexion();
+	                        $Usuario->Tabla = 'producto';	                        
+                          	$Usuario->Datos = array('cantidad','precio','descripcion','nombre','anio','linkyoutube','v'=>$Rela_tipo_producto,'genero','consola','anio');
+	                        $Usuario->Insertar();             
+	                        ?>
 						</section>
 						
 					</div>
