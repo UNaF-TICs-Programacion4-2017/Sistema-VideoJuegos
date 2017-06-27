@@ -73,7 +73,8 @@
 							<header>
 								<h2 class="section-title">Insertar Juego Nuevo</h2>
 							</header>
-							<form method="POST">
+							<form method="POST"> 
+    
 						<table class="insert-juego">
 							<thead>
 								<tr>
@@ -86,87 +87,29 @@
 									<th class="consola-juego">Consola</th>
 									<td class="consola-juego">
 										<select name="consola">
-											
-                                          <?php
-                                          $oConsola = new Conexion();
-                                          $oConsola->Tabla = 'consola';
-                                          $oConsola->Datos = array('id','descripcion');
-
-                                          $oConsola->Condicion ="id < '100'";
-                                          $Consulta = $oConsola->ObtenerFila();
-                                          $ID = '';
-                                          $Descripcion = '';
-
-                                         foreach ($Consulta as $key => $Columna) 
-                                        {
-
-                                         	foreach ($Columna as $Fila) 
-                                         	{
-                                         		if(!is_numeric($Fila))
-                                         		{
-                                         			$Descripcion = $Fila;
-                                         	    }
-                                         	    else
-                                         	    {
-                                         	    	$ID = $Fila;
-                                         	    }
-                                         	}
-                                         	echo "<option value='$ID'>$Descripcion</option>";
-
-                                         }
-                                          ?>
+											<?php CargarConsolas(); ?>
 										</select>
 									</td>
 								</tr>
 								<tr>
-									<th class="genero-juego">Genero</th>
+									<th class="genero-juego">Género</th>
 									<td class="genero-juego">
 
 										<select name="genero">
-											<?php
-                                            $oGenero = new Conexion();
-                                            $oGenero->Tabla ='genero';
-                                            $oGenero->Datos = array('id','descripcion');
-
-                                            $oGenero->Condicion ="id < '100'";
-                                            $Consulta = $oGenero->ObtenerFila();
-                                            $ID='';
-                                            $Descripcion = '';
-                                              foreach ($Consulta as $key => $Columna) 
-                                        {
-
-                                         	foreach ($Columna as $Fila) 
-                                         	{
-                                         		if(!is_numeric($Fila))
-                                         		{
-                                         			$Descripcion = $Fila;
-                                         	    }
-                                         	    else
-                                         	    {
-                                         	    	$ID = $Fila;
-                                         	    }
-                                         	}
-                                         	echo "<option value='$ID'>$Descripcion</option>";
-
-                                         }
-
-											?>
+											<?php CargarGeneros(); ?>
 										</select>
 									</td>
 								</tr>
 								<tr>
-									<th class="descripcion-juego">Descripcion</th>
+									<th class="descripcion-juego">Descripción</th>
 									<td class="descripcion-juego">
-										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="descripcion" id="" cols="60" rows="5">
-										
-										</textarea>
+										<textarea name="descripcion" id="" cols="50" rows="5" placeholder="Ingrese la descripción del juego"></textarea>
 									</td>
 								</tr>
 								<tr>
-									<th class="anio-juego">Anio</th>
+									<th class="anio-juego">Año</th>
 									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio" name="anio">
+										<input type="text" size="10" placeholder="Ingresar Año" name="anio">
 									</td>
 								</tr>
 								<tr>
@@ -178,18 +121,7 @@
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="cantidad">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
+										<input type="number" name="cantidad" min="1" max="50">
 									</td>
 								</tr>
 								<tr>
@@ -198,37 +130,24 @@
 										<input type="text" size="60" placeholder="Ingresar URL YouTube" name="linkyoutube">
 									</td>
 								</tr>
-
 								<tr>
-									<th class="imagen-juego">Imagen</th>
-									<td>
-										
-										<input name="imagen" type="file" / >
-										<input type="submit" value="Subir archivo" />
-										
+									<th class="imagen-juego">Imágen</th>
+									<td>									
+										<input name="imagen" type="file">								
 									</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-										<td>
-											<input type="submit" value="Cargar Datos">
-										</td>
+									<td>
+										<input type="submit" value="Cargar Datos">
+									</td>
 								</tr>
 							</tbody>
 							
 						</table> 
                             </form>
-                            <?php
-                            $Rela_tipo_producto = '1';
-                            $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
-                            //echo var_dump($fecha);
-                            $Usuario = new Conexion();
-                            $cantidad= $_POST['cantidad'];
-	                        $Usuario->Tabla = 'producto';	                        
-                          	$Usuario->Datos = array('cantidad','precio','descripcion','nombre','anio','linkyoutube','v'=>$Rela_tipo_producto,'genero','consola','anio');
-	                        $Usuario->Insertar();             
-	                        ?>
+                            <?php InsertarJuego(); ?>                                     
 						</section>
 						
 					</div>
