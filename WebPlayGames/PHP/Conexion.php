@@ -79,8 +79,8 @@ class Conexion
 				}
 			}
 			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
-			print_r ($Variables);
-			echo $Insertar . ' ' . count($Variables);
+			/*print_r ($Variables);
+			echo $Insertar . ' ' . count($Variables);*/
 			$this->Ejecutar($Insertar, $Variables);
 		}
 		catch (PDOException $ex) 
