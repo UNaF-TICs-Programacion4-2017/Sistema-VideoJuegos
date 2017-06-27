@@ -97,18 +97,21 @@
 									<th class="genero-juego">Genero</th>
 									<td class="genero-juego">
 										<select name="#">
-											<option value="1">Accion</option>
-											<option value="2">Accion-Aventura</option>
-											<option value="3">Aventura</option>
-											<option value="4">Juego de Rol</option>
-											<option value="5">Simulacion</option>
-											<option value="6">Estrategia</option>
-											<option value="7">Deporte</option>
-											<option value="8">Carrera</option>
-											<option value="9">MMO</option>
-											<option value="10">Sandbox</option>
-											<option value="11">Musical</option>
-											<option value="12">Terror</option>
+											<?php
+												$oConexion = new Conexion();
+												$oConexion->Tabla = 'genero';
+												$oConexion->Datos = array('descripcion');
+												$oConexion->Condicion = "descripcion <> 'hola'";
+												$Consulta = $oConexion->ObtenerFila();
+												echo "<option>".$Consulta[0][0]."</option>";
+												foreach ($Consulta as $Columnas) 
+												{
+													foreach ($Columnas as $Filas) 
+													{
+														echo "<option>".$Filas."</option>";
+													}
+												}
+											?>
 										</select>
 									</td>
 								</tr>

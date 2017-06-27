@@ -156,7 +156,14 @@ class Conexion
 			{
 				$Columnas = $this->Datos;
 			}
-			$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
+			/*if ($this->Condicion <> '') 
+			{*/
+				$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
+			/*}
+			else
+			{
+				$Consulta = "SELECT $Columnas FROM $this->Tabla";
+			}*/
 			if ($Columnas == '*') 
 			{
 				$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";
