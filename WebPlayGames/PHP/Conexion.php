@@ -69,16 +69,18 @@ class Conexion
 			foreach ($this->Datos as $Key => $Valor) 
 			{
 				$Valores = $Valores.",?";
-				if (isset($_POST[$Valor]))
-				{
-					$Variables[] = $_POST[$Valor];
-				}
-				elseif ($Key == 'v') 
+				if ($Key == 'v')
 				{
 					$Variables[] = $Valor;
 				}
+				else
+				{
+					$Variables[] = $_POST[$Valor];
+				}
 			}
 			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
+			print_r ($Variables);
+			echo $Insertar . ' ' . count($Variables);
 			$this->Ejecutar($Insertar, $Variables);
 		}
 		catch (PDOException $ex) 

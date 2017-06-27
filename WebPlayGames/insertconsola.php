@@ -72,6 +72,7 @@
 							<header>
 								<h2 class="section-title">Insertar Consola Nueva</h2>
 							</header>
+							<form method="POST">
 						<table class="insert-juego">
 							<thead>
 								<tr>
@@ -138,12 +139,23 @@
 							<tbody>
 								<tr>
 										<td>
-											<a href="#" class="button">Insertar Consola</a>
+											<input type="submit" value="Cargar Registro">
 										</td>
 								</tr>
+
 							</tbody>
 							
 						</table> 
+						</form>
+						<?php
+						  
+	                       $Usuario = new Conexion();
+	                       $Usuario->Tabla = 'consola';
+	                      
+	                       $Usuario->Datos = array('userBD','passwordBD','v'=>$Rela_Tipo_Usuario);
+	                       $Usuario->Insertar();
+                          ?>
+
 
 						</section>
 						
