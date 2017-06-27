@@ -121,6 +121,7 @@
 								<tr>
 									<th class="genero-juego">Genero</th>
 									<td class="genero-juego">
+
 										<select name="genero">
 											<?php
                                             $oGenero = new Conexion();
@@ -148,6 +149,7 @@
                                          	echo "<option value='$ID'>$Descripcion</option>";
 
                                          }
+
 											?>
 										</select>
 									</td>
