@@ -224,6 +224,7 @@
                             $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
                             //echo var_dump($fecha);
                             $Usuario = new Conexion();
+                            $cantidad= $_POST['cantidad'];
 	                        $Usuario->Tabla = 'producto';	                        
                           	$Usuario->Datos = array('cantidad','precio','descripcion','nombre','anio','linkyoutube','v'=>$Rela_tipo_producto,'genero','consola','anio');
 	                        $Usuario->Insertar();             

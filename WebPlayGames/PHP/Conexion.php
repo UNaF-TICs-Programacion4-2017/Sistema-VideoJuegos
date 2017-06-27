@@ -76,11 +76,13 @@ class Conexion
 				else
 				{
 					$Variables[] = $_POST[$Valor];
+					
 				}
+				
 			}
 			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
-			/*print_r ($Variables);
-			echo $Insertar . ' ' . count($Variables);*/
+			print_r ($Variables);
+			echo $Insertar . ' ' . count($Variables);
 			$this->Ejecutar($Insertar, $Variables);
 		}
 		catch (PDOException $ex) 
