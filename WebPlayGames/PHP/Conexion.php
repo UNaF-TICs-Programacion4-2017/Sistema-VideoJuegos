@@ -69,20 +69,19 @@ class Conexion
 			foreach ($this->Datos as $Key => $Valor) 
 			{
 				$Valores = $Valores.",?";
-				if ($Key == 'v')
+				if (is_numeric($Key)) 
 				{
-					$Variables[] = $Valor;
+					if (isset($_POST[$Valor])) 
+					{
+						$Variables[] = $_POST[$Valor];
+					}
 				}
 				else
 				{
-					$Variables[] = $_POST[$Valor];
-					
+					$Variables[] = $Valor;
 				}
-				
 			}
 			$Insertar = "INSERT INTO $this->Tabla VALUES($Valores)";
-			print_r ($Variables);
-			echo $Insertar . ' ' . count($Variables);
 			$this->Ejecutar($Insertar, $Variables);
 		}
 		catch (PDOException $ex) 
@@ -90,6 +89,7 @@ class Conexion
 			echo $ex->getMessage();
 			exit;
 		}
+
 	}
 	public function Actualizar()
 	{
@@ -160,14 +160,14 @@ class Conexion
 			{
 				$Columnas = $this->Datos;
 			}
-			/*if ($this->Condicion <> '') 
-			{*/
+			if ($this->Condicion <> '') 
+			{
 				$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
-			/*}
+			}
 			else
 			{
 				$Consulta = "SELECT $Columnas FROM $this->Tabla";
-			}*/
+			}
 			if ($Columnas == '*') 
 			{
 				$NumeroDeColumnas = "SELECT COUNT(*) FROM information_schema.columns WHERE table_name = '$this->Tabla'";

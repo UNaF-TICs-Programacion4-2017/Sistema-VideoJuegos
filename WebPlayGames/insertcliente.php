@@ -108,7 +108,7 @@
 								<tr>
 									<th class="nombre-juego">Email</th>
 									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Email" name="email">
+										<input type="email" size="60" placeholder="Ingresar Email" name="email">
 									</td>
 								</tr>
 								<tr>
