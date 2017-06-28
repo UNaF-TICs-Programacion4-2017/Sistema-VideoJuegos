@@ -83,8 +83,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1.17em;
+  font-size: 1.11em;
   margin: 1em 0;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+    font-size: 1.0142857143em;
+    width: 300px;
+    height: 50px;
 }
 
 h4 {
@@ -2808,6 +2815,98 @@ table.insert-juego .fa-times {
   margin-left: 20px;
 }
 .insert-juego-total .button, .insert-juego-total form input[type="submit"], form .insert-juego-total input[type="submit"], .insert-juego-total form button, form .insert-juego-total button, .insert-juego-total form input[type="reset"], form .insert-juego-total input[type="reset"] {
+  font-weight: 300;
+}
+
+
+
+table.acciones-adm {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  width:22%;
+  margin: 0 0 5px;
+  padding: 0;
+}
+ table.acciones-adm th, table.acciones-adm td  {
+ background: white;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  
+ 
+}
+
+table.acciones-adm td:first-child, table.acciones-adm th:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+table.acciones-adm td:last-child, table.acciones-adm th:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+}
+table.acciones-adm .product-thumbnail {
+  float: left;
+  margin-right: 20px;
+  border: 3px solid #e9e9e9;
+  border-radius: 3px;
+}
+table.acciones-adm .product-thumbnail img {
+  display: block;
+}
+table.acciones-adm .product-title {
+  font-weight: 300;
+}
+table.acciones-adm .fa-times {
+  color: #da7e7e;
+}
+@media screen and (max-width: 640px) {
+  table.acciones-adm .product-thumbnail {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  table.acciones-adm .action {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  table.acciones-adm .product-qty {
+    display: none;
+  }
+}
+
+.acciones-adm-total {
+  background: white;
+  padding: 20px;
+  width: 370px;
+  float: right;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 480px) {
+  .acciones-adm-total {
+    width: 100%;
+    float: none;
+  }
+}
+.acciones-adm-total p {
+  font-weight: 700;
+}
+.acciones-adm-total p strong {
+  font-weight: 300;
+}
+.acciones-adm-total .total {
+  font-size: 30px;
+  font-size: 2.1428571429em;
+}
+.acciones-adm-total .total .num {
+  color: #C40000;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.acciones-adm-total .button, .acciones-adm-total form input[type="submit"], form .acciones-adm-total input[type="submit"], .acciones-adm-total form button, form .acciones-adm-total button, .acciones-adm-total form input[type="reset"], form .acciones-adm-total input[type="reset"] {
   font-weight: 300;
 }
 /*

@@ -46,13 +46,13 @@
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
 							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.php">Accesorios</a></li>
-							<li class="menu-item"><a href="products.php">Consolas</a></li>
-							<li class="menu-item"><a href="products.php">Playstation</a></li>
-							<li class="menu-item"><a href="products.php">Xbox</a></li>
-							<li class="menu-item"><a href="products.php">Nintendo</a></li>
-							<li class="menu-item"><a href="products.php">Merchandising</a></li>
-							<li class="menu-item"><a href="products.php">Figuras de Accion</a></li>
+							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
+							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
+							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
+							<li class="menu-item"><a href="productoxbox.php">Xbox</a></li>
+							<li class="menu-item"><a href="productonintendo.php">Nintendo</a></li>
+							<li class="menu-item"><a href="productomerchandising.php">Merchandising</a></li>
+							<li class="menu-item"><a href="productofiguradeaccion.php">Figuras de Accion</a></li>
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
@@ -200,18 +200,6 @@
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
-
-							</div> <!-- .product-list -->
-
-						</section>
-
-						<section>
-							<header>
-								<h2 class="section-title">Promociones</h2>
-								<a href="#" class="all">Show All</a>
-							</header>
-
-							<div class="product-list">
 								
 								<div class="product">
 									<div class="inner-product">
@@ -224,8 +212,7 @@
 										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
-								</div> <!-- .product -->
-								
+								</div> <!-- .product -->	
 								
 								<div class="product">
 									<div class="inner-product">
@@ -249,7 +236,7 @@
 										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
 										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
