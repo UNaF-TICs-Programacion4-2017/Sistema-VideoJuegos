@@ -1,3 +1,7 @@
+<?php 
+	include 'PHP/Clases.php'; 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -35,11 +39,14 @@
 							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
-
+					<div class="left-section pull-left">
+						<div class="widget">
+							<h3 class="widget-title"> Bienvenido: <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></h3>
+						</div>
+					</div>
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#">My Account</a>
-						<a href="#">Logout <small>(John Smith)</small></a>
+						<a href="index.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
@@ -70,74 +77,63 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Agregar Figura de Accion Nueva</h2>
+								<h2 class="section-title">Agregar Figura de Acción Nueva</h2>
 							</header>
+							<form action="" method="POST" enctype="multipart/form-data">
 						<table class="insert-juego">
 							<thead>
 								<tr>
 									<th class="nombre-juego">Nombre</th>
 									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre">
+										<input type="text" name="nombre" size="60" placeholder="Ingresar Nombre">
 									</td>
 								</tr>
 								<tr>
-									<th class="descripcion-juego">Descripcion</th>
+									<th class="descripcion-juego">Descripción</th>
 									<td class="descripcion-juego">
 										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="" id="" cols="60" rows="5">
-										
-										</textarea>
+										<textarea name="descripcion" id="" cols="60" rows="5"></textarea>
 									</td>
 								</tr>
 								<tr>
-									<th class="anio-juego">Anio</th>
+									<th class="anio-juego">Año</th>
 									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio">
+										<input type="text" name="anio" size="10" placeholder="Ingresar Año">
 									</td>
 								</tr>
 								<tr>
 									<th class="precio-juego">Precio</th>
 									<td class="precio-juego">
-										<input type="text" size="15" placeholder="Ingresar Precio en $">
+										<input type="text" size="15" name="precio" placeholder="Ingresar Precio en $">
 									</td>
 								</tr>
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="#">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
+										<input type="number" name="cantidad" min="1" max="50">
 									</td>
 								</tr>
 								<tr>
-									<th class="imagen-juego">Imagen</th>
+									<th class="imagen-juego">Imágen</th>
 									<td>
-										<form enctype="multipart/form-data" action="uploader.php" method="POST">
-										<input name="uploadedfile" type="file" />
-										<input type="submit" value="Subir archivo" />
-										</form>
+										
+										<input name="imagen" type="file" />
+										
+										
 									</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 										<td>
-											<a href="#" class="button">Insertar Figura</a>
+											<input type="submit" value="Cargar Registro">
 										</td>
 								</tr>
 							</tbody>
 							
 						</table> 
-
+							</form>
+							<?php InsertarFiguraAccion(); ?>
 						</section>
 						
 					</div>
