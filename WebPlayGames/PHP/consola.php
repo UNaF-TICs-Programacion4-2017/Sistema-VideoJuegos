@@ -21,9 +21,7 @@ function InsertarConsola()
 	  							'nombre',
 	  							'anio',
 	  							'linkyoutube',
-	  							'v1'=>$Rela_tipo_producto,
-	  							'v2'=>$genero,
-	  							'v3'=>$consola,
+	  							
 	  							'v4'=>$fecha
 	  							);
 	    $oUsuario->Insertar(); 
