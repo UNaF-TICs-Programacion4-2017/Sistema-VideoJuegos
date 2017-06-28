@@ -73,7 +73,7 @@
 							<header>
 								<h2 class="section-title">Insertar Juego Nuevo</h2>
 							</header>
-							<form method="POST"> 
+							<form method="POST" enctype="multipart/form-data"> 
     
 						<table class="insert-juego">
 							<thead>
@@ -132,7 +132,8 @@
 								</tr>
 								<tr>
 									<th class="imagen-juego">Imágen</th>
-									<td>									
+									<td>
+																		
 										<input name="imagen" type="file">								
 									</td>
 								</tr>

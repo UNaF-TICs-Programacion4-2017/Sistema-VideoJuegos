@@ -83,16 +83,16 @@
 									</td>
 								</tr>
 								<tr>
-									<th class="descripcion-juego">Descripcion</th>
+									<th class="descripcion-juego">Descripción</th>
 									<td class="descripcion-juego">
 										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
 										<textarea name="descripcion" id="" cols="60" rows="5"></textarea>
 									</td>
 								</tr>
 								<tr>
-									<th class="anio-juego">Anio</th>
+									<th class="anio-juego">Año</th>
 									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio" name="anio">
+										<input type="text" size="10" placeholder="Ingresar Año" name="anio">
 									</td>
 								</tr>
 								<tr>
@@ -104,18 +104,7 @@
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="cantidad">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
+										<input type="number" name="cantidad" min="1" max="50">
 									</td>
 								</tr>
 								<tr>
@@ -126,10 +115,10 @@
 								</tr>
 
 								<tr>
-									<th class="imagen-juego">Imagen</th>
+									<th class="imagen-juego">Imágen</th>
 									<td>
 										
-										<input name="uploadedfile" type="file" />
+										<input name="imagen" type="file" />
 										<input type="submit" value="Subir archivo" />
 										
 									</td>

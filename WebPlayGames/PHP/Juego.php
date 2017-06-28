@@ -59,6 +59,7 @@ function InsertarJuego()
     $oUsuario->Datos = array('nombre');
     if($oUsuario->ComprobarDatos() == true)
     {
+    	$imagen = ObtenerImagen();
     	$oUsuario->Tabla = 'producto';	                        
 	  	$oUsuario->Datos = array(
 	  							'cantidad',
@@ -70,7 +71,8 @@ function InsertarJuego()
 	  							'v1'=>$Rela_tipo_producto,
 	  							'genero',
 	  							'consola',
-	  							'v2'=>$fecha
+	  							'v2'=>$fecha,
+	  							'v3'=>$imagen
 	  							);
 	    $oUsuario->Insertar(); 
     }
