@@ -53,7 +53,7 @@ function CargarGeneros()
 }
 function InsertarJuego()
 {
-	$Rela_tipo_producto = '1';
+	$Rela_tipo_producto = '4';
     $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
     $oUsuario = new Conexion();
     $oUsuario->Datos = array('nombre');
