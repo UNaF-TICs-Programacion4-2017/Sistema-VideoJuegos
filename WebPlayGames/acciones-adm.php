@@ -1,3 +1,4 @@
+<?php include 'PHP/Clases.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,10 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Ecommerce Video Game | Single</title>
+		<title>Ecommerce Video Game | Cart</title>
 
 		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700|" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
 
@@ -31,8 +32,8 @@
 					<a href="index.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
 						<div class="logo-text">
-							<h1 class="site-title">PLAY GAMES FORMOSA</h1>
-							<small class="site-description">Venta y Canje de Videojuegos</small>
+							<h1 class="site-title">PLAY GAMES</h1>
+							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -46,81 +47,73 @@
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
 							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.php">Accesorios</a></li>
-							<li class="menu-item"><a href="products.php">Consolas</a></li>
-							<li class="menu-item"><a href="products.php">Playstation</a></li>
-							<li class="menu-item"><a href="products.php">Xbox</a></li>
-							<li class="menu-item"><a href="products.php">Nintendo</a></li>
-							<li class="menu-item"><a href="products.php">Merchandising</a></li>
-							<li class="menu-item"><a href="products.php">Figuras de Accion</a></li>
+							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
+							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
+							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
+							<li class="menu-item"><a href="productoxbox.php">Xbox</a></li>
+							<li class="menu-item"><a href="productonintendo.php">Nintendo</a></li>
+							<li class="menu-item"><a href="productomerchandising.php">Merchandising</a></li>
+							<li class="menu-item"><a href="productofiguradeaccion.php">Figuras de Accion</a></li>
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
-							<input type="text" placeholder="Search...">
+							<input type="text" placeholder="Buscar...">
 						</div> <!-- .search-form -->
 
 						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
 					</div> <!-- .main-navigation -->
+
 					
 				</div> <!-- .container -->
 			</div> <!-- .site-header -->
 			<main class="main-content">
 				<div class="container">
 					<div class="page">
-						
-						<h2>Neque porro quisquam dolorem ipsum</h2>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur<a href="#"> quis autem vel eum iure </a>reprehenderit qui in ea voluptate velit esse quam nihil molestiae. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa officia deserunt mollitia animi.</p>
-
-						<h2>Nemo enim ipsam voluptatem quia voluptas</h2>
-						<p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
-						<ol>
-							<li>Phasellus vitae enim non quam adipiscing suscipit nec quis mauris.</li>
-							<li>Vivamus feugiat erat vel pellentesque luctus.</li>
-							<li>Nullam ac urna facilisis, fringilla arcu in, sodales velit.</li>
-							<li>Nam tempus nisi ornare urna mollis cursus.</li>
-						</ol>
-
-						<div class="row">
-							<div class="col-md-3">
-								<div class="feature">
-									<div class="feature-icon">
-										<i class="icon-box-check"></i>
-									</div>
-									<h3 class="feature-title">Safe pack</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div> <!-- .feature -->
-							</div> <!-- .column -->
-							<div class="col-md-3">
-								<div class="feature">
-									<div class="feature-icon">
-										<i class="icon-plane-globe"></i>
-									</div>
-									<h3 class="feature-title">World wide</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div> <!-- .feature -->
-							</div> <!-- .column -->
-							<div class="col-md-3">
-								<div class="feature">
-									<div class="feature-icon">
-										<i class="icon-car"></i>
-									</div>
-									<h3 class="feature-title">Fast Delivery</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div> <!-- .feature -->
-							</div> <!-- .column -->
-							<div class="col-md-3">
-								<div class="feature">
-									<div class="feature-icon">
-										<i class="icon-customer-service"></i>
-									</div>
-									<h3 class="feature-title">24/h Support</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-								</div> <!-- .feature -->
-							</div> <!-- .column -->
-						</div> <!-- .row -->
-
-						<h2>Nemo enim ipsam voluptatem quia voluptas</h2>
-						<p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+					<section>
+							<header>
+								<h2 class="section-title">Acciones de Administrador</h2>
+							</header>
+							<form method="POST" enctype="multipart/form-data"> 
+								<table class="acciones-adm">			
+									<tbody>
+										<tr>
+											<td>
+												<a href="insertcliente.php" class="button">Agregar Cliente Nuevo</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="insertjuego.php" class="button">Agregar Juego Nuevo</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="insertconsola.php" class="button">Agregar Consola Nueva</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="insertaccesorio.php" class="button">Agregar Accesorio Nuevo</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="insertmerchandising.php" class="button">Agregar Merchandising Nuevo</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="insertfiguradeaccion.php" class="button">Agregar Figura de Accion Nueva</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+                            </form>
+                            <?php 
+                            InsertarJuego();
+                            
+                             ?>                                     
+						</section>
 						
 					</div>
 				</div> <!-- .container -->
@@ -192,7 +185,7 @@
 		<div class="overlay"></div>
 
 		<div class="auth-popup popup">
-			<a href="#" class="close"><i class="fa fa-close"></i></a>
+			<a href="#" class="close"><i class="fa fa-times"></i></a>
 			<div class="row">
 				<div class="col-md-6">
 					<h2 class="section-title">Login</h2>

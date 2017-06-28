@@ -46,13 +46,13 @@
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
 							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.php">Accesorios</a></li>
-							<li class="menu-item"><a href="products.php">Consolas</a></li>
-							<li class="menu-item"><a href="products.php">Playstation</a></li>
-							<li class="menu-item"><a href="products.php">Xbox</a></li>
-							<li class="menu-item"><a href="products.php">Nintendo</a></li>
-							<li class="menu-item"><a href="products.php">Merchandising</a></li>
-							<li class="menu-item"><a href="products.php">Figuras de Accion</a></li>
+							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
+							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
+							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
+							<li class="menu-item"><a href="productoxbox.php">Xbox</a></li>
+							<li class="menu-item"><a href="productonintendo.php">Nintendo</a></li>
+							<li class="menu-item"><a href="productomerchandising.php">Merchandising</a></li>
+							<li class="menu-item"><a href="productofiguradeaccion.php">Figuras de Accion</a></li>
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
@@ -71,24 +71,17 @@
 						<div class="filter-bar">
 							<div class="filter">
 								<span>
-									<label>Sort by:</label>
+									<label>Ordenar Por:</label>
 									<select name="#">
-										<option value="#">Popularity</option>
-										<option value="#">Highest Rating</option>
-										<option value="#">Lowest price</option>
+										<option value="#">Mostrar Todo</option>
+										<option value="#">Playstation 4</option>
+										<option value="#">Playstation 3</option>
+										<option value="#">Xbox</option>
+										<option value="#">Nintendo</option>
 									</select>
 								</span>
 								<span>
-									<label>Genre</label>
-									<select name="#">
-										<option value="#">Show All</option>
-										<option value="#">Action</option>
-										<option value="#">Racing</option>
-										<option value="#">Strategy</option>
-									</select>
-								</span>
-								<span>
-									<label>Show:</label>
+									<label>Mostrar:</label>
 									<select name="#">
 										<option value="#">8</option>
 										<option value="#">16</option>
@@ -115,8 +108,9 @@
 											<a href="single.php"><img src="dummy/game-1.jpg" alt="Game 1"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -127,8 +121,9 @@
 											<a href="single.php"><img src="dummy/game-2.jpg" alt="Game 2"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -139,8 +134,9 @@
 											<a href="single.php"><img src="dummy/game-3.jpg" alt="Game 3"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -151,8 +147,9 @@
 											<a href="single.php"><img src="dummy/game-4.jpg" alt="Game 4"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -163,12 +160,12 @@
 											<a href="single.php"><img src="dummy/game-5.jpg" alt="Game 1"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Watch Dogs</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
-								</div> <!-- .product -->
-								
+								</div> <!-- .product -->	
 								
 								<div class="product">
 									<div class="inner-product">
@@ -176,8 +173,9 @@
 											<a href="single.php"><img src="dummy/game-6.jpg" alt="Game 2"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Mortal Kombat X</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -189,8 +187,9 @@
 											<a href="single.php"><img src="dummy/game-7.jpg" alt="Game 3"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -202,13 +201,14 @@
 											<a href="single.php"><img src="dummy/game-8.jpg" alt="Game 4"></a>
 										</div>
 										<h3 class="product-title"><a href="#">Nascar '14</a></h3>
+										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="#" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
 								
-						</div> <!-- .product-list -->
+							</div> <!-- .product-list -->
 
 						<div class="pagination-bar">
 							<div class="pagination">

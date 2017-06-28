@@ -1,7 +1,3 @@
-<?php 
-	include 'PHP/Clases.php'; 
-	session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Ecommerce Video Game</title>
+		<title>Ecommerce Video Game | Products</title>
 
 		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Roboto:100,400,700|" rel="stylesheet" type="text/css">
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
 
@@ -27,12 +23,10 @@
 	</head>
 
 
-	<body class="slider-collapse">
-
+	<body>
+		
 		<div id="site-content">
-
 			<div class="site-header">
-
 				<div class="container">
 					<a href="index.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
@@ -41,14 +35,11 @@
 							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
-					<div class="left-section pull-left">
-						<div class="widget">
-							<h3 class="widget-title"> Bienvenido: <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></h3>
-						</div>
-					</div>
+
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="index.php">(Cerrar Sesión)</a>
+						<a href="#">My Account</a>
+						<a href="#">Logout <small>(John Smith)</small></a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
@@ -65,99 +56,61 @@
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
-							<input type="text" placeholder="Search...">
+							<input type="text" placeholder="Buscar...">
 						</div> <!-- .search-form -->
 
 						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
 					</div> <!-- .main-navigation -->
+
+
 				</div> <!-- .container -->
 			</div> <!-- .site-header -->
-
-			<div class="home-slider">
-				<ul class="slides">
-					<li data-bg-image="dummy/slide-1.jpg">
-						<div class="container">
-							<div class="slide-content">
-								<h2 class="slide-title">FIFA 17</h2>
-								<small class="slide-subtitle">$1.400</small>
-								
-								<p>FIFA 17 es un videojuego de fútbol desarrollado por EA Electronic publicado por EA Sports EA. y Es el 24.º de la serie y salió a la venta el 28 de septiembre del 2016 en Norteamérica y el 29 de septiembre para el resto del mundo.2 Este será el primer juego de la FIFA en la serie en emplear el motor de juego Frostbite..</p>
-								
-								<a href="cart.php" class="button">Reservar</a>
-							</div>
-															<!-- 16:9 aspect ratio -->
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/-3fjoe5Njpc" frameborder="0" allowfullscreen class="iframe-video"></iframe>
-						</div>
-					</li>
-					<li data-bg-image="dummy/slide-2.jpg">
-						<div class="container">
-							<div class="slide-content">
-								<h2 class="slide-title">Kill Zone 3</h2>
-								<small class="slide-subtitle">$1.900</small>
-								
-								<p>Killzone 3 es un videojuego de acción en primera persona para PlayStation 3, desarrollado por Guerrilla Games y publicado por Sony Computer Entertainment. Es el cuarto juego de la serie Killzone.</p>
-								
-								<a href="cart.php" class="button">Reservar</a>
-							</div>
-
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/jqF1jlhW1fE" frameborder="0" allowfullscreen class="iframe-video"></iframe>
-						</div>
-					</li>
-					<li data-bg-image="dummy/slide-3.jpg">
-						<div class="container">
-							<div class="slide-content">
-								<h2 class="slide-title">GTA V</h2>
-								<small class="slide-subtitle">$1.500</small>
-								
-								<p>Grand Theft Auto V (abreviado como GTA V o GTA5) es un videojuego de acción-aventura de mundo abierto desarrollado por la compañía británica Rockstar North y distribuido por Rockstar Games. Fue lanzado el 17 de septiembre de 2013 para las consolas PlayStation 3 y Xbox 360.5 Posteriormente, fue lanzado para las consolas de nueva generación PlayStation 4 y Xbox One el 18 de noviembre de 2014 y finalmente para Microsoft Windows el 14 de abril de 2015. Se trató del primer gran título en la serie Grand Theft Auto desde que se estrenara Grand Theft Auto IV en 2008, el cual estrenó la «era HD» de la mencionada serie de videojuegos.</p>
-								
-								<a href="cart.php" class="button">Reservar</a>
-								
-							</div>
-
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/QkkoHAzjnUs" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
-						</div>		
-					<li data-bg-image="dummy/slide-3.jpg">
-						<div class="container">
-							<div class="slide-content">
-								<h2 class="slide-title">Dirt Rally</h2>
-								<small class="slide-subtitle">$1.500</small>
-								
-								<p>Dirt Rally (escrito como DiRT Rally) es un videojuego de carreras desarrollado y publicado por Codemasters para Windows de Microsoft. Una versión de acceso anticipado del juego se liberó el 27 de abril de 2015, a través del servicio de distribución digital Steam. La versión final del juego se publicó el 7 de diciembre de 2015. El juego se publicó para las consolas de octava generación PlayStation 4 y Xbox One el 5 de abril de 2016. Está anunciada la versión para Linux/SteamOS.</p>
-								
-								<a href="cart.php" class="button">Reservar</a>
-								
-							</div>
-
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/3j7T6-YPXMQ" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
-						</div>
-						<li data-bg-image="dummy/slide-3.jpg">
-						<div class="container">
-							<div class="slide-content">
-								<h2 class="slide-title">Forza Horizon 3</h2>
-								<small class="slide-subtitle">$1.500</small>
-								
-								<p>Forza Horizon 3 es un videojuego de carreras de mundo abierto desarrollado por Playground Games y Turn 10 Studios y distribuido por Microsoft Studios para Xbox One y Microsoft Windows 10. Fue revelado en el E3 2016 el 14 de junio de 2016. Es el tercer título de la saga Forza Horizon y estará ambientado en Australia.</p>
-								
-								<a href="cart.php" class="button">Reservar</a>
-								
-							</div>
-
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/vD1ccSM9qiA" frameborder="0" allowfullscreen class="iframe-video"></iframe>						
-						</div>
-				</ul> <!-- .slides -->
-			</div> <!-- .home-slider -->
-
 			<main class="main-content">
 				<div class="container">
 					<div class="page">
-						<section>
-							<header>
-								<h2 class="section-title">Nuevos Productos</h2>
-								<a href="#" class="all">Show All</a>
-							</header>
+						<div class="filter-bar">
+							<div class="filter">
+								<span>
+									<label>Ordenar Por:</label>
+									<select name="#">
+										<option value="#">Playstation 4</option>
+										<option value="#">Playstation 3</option>
+									</select>
+								</span>
+								<span>
+									<label>Generos</label>
+									<select name="#">
+										<option value="#">Accion</option>
+										<option value="#">Accion-Aventura</option>
+										<option value="#">Aventura</option>
+										<option value="#">Deporte</option>
+										<option value="#">Carrera</option>
+										<option value="#">Terror</option>
+										<option value="#">Musical</option>
+									</select>
+								</span>
+								<span>
+									<label>Mostrar:</label>
+									<select name="#">
+										<option value="#">8</option>
+										<option value="#">16</option>
+										<option value="#">24</option>
+									</select>
+								</span>
+							</div> <!-- .filter -->
 
-							<div class="product-list">
+							<div class="pagination">
+								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
+								<span class="page-number current">1</span>
+								<a href="#" class="page-number">2</a>
+								<a href="#" class="page-number">3</a>
+								<a href="#" class="page-number">...</a>
+								<a href="#" class="page-number">12</a>
+								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
+							</div> <!-- .pagination -->
+						</div> <!-- .filter-bar -->
+						
+						<div class="product-list">
 								<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">
@@ -209,18 +162,6 @@
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
-
-							</div> <!-- .product-list -->
-
-						</section>
-
-						<section>
-							<header>
-								<h2 class="section-title">Promociones</h2>
-								<a href="#" class="all">Show All</a>
-							</header>
-
-							<div class="product-list">
 								
 								<div class="product">
 									<div class="inner-product">
@@ -233,8 +174,7 @@
 										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
-								</div> <!-- .product -->
-								
+								</div> <!-- .product -->	
 								
 								<div class="product">
 									<div class="inner-product">
@@ -258,7 +198,7 @@
 										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
 										<small class="price">$19.00</small>
 										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Add to cart</a>
+										<a href="cart.php" class="button">Reservar</a>
 										<a href="#" class="button muted">Read Details</a>
 									</div>
 								</div> <!-- .product -->
@@ -279,7 +219,17 @@
 								
 							</div> <!-- .product-list -->
 
-						</section>
+						<div class="pagination-bar">
+							<div class="pagination">
+								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
+								<span class="page-number current">1</span>
+								<a href="#" class="page-number">2</a>
+								<a href="#" class="page-number">3</a>
+								<a href="#" class="page-number">...</a>
+								<a href="#" class="page-number">12</a>
+								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
+							</div> <!-- .pagination -->
+						</div>
 					</div>
 				</div> <!-- .container -->
 			</main> <!-- .main-content -->
@@ -332,7 +282,7 @@
 								</form>
 							</div> <!-- .widget -->
 						</div> <!-- column -->
-					</div><!-- .row --> 
+					</div><!-- .row -->
 
 					<div class="colophon">
 						<div class="copy">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</div>
@@ -350,7 +300,7 @@
 		<div class="overlay"></div>
 
 		<div class="auth-popup popup">
-			<a href="#" class="close"><i class="fa fa-times"></i></a>
+			<a href="#" class="close"><i class="fa fa-close"></i></a>
 			<div class="row">
 				<div class="col-md-6">
 					<h2 class="section-title">Login</h2>
