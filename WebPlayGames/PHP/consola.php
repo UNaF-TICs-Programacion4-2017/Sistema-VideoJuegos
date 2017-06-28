@@ -4,10 +4,10 @@ require_once 'Conexion.php';
 
 function InsertarConsola()
 {
-	{
-	$Rela_tipo_producto = '1';
-	$Rela_genero ='1';
-	$Rela_consola ='1';
+	
+	$Rela_tipo_producto = '4';
+	$genero = '';
+	$consola = '';
     $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
     $oUsuario = new Conexion();
     $oUsuario->Datos = array('nombre');
@@ -22,12 +22,10 @@ function InsertarConsola()
 	  							'anio',
 	  							'linkyoutube',
 	  							'v1'=>$Rela_tipo_producto,
-	  							'v3'=>$Rela_genero,
-	  							'v4'=>$Rela_consola,
-	  							'v2'=>$fecha
+	  							'v2'=>$genero,
+	  							'v3'=>$consola,
+	  							'v4'=>$fecha
 	  							);
 	    $oUsuario->Insertar(); 
-
     }
-}
 }
