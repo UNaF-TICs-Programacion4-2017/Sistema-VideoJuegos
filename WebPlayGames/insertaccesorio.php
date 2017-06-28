@@ -82,30 +82,23 @@
 									</td>
 								</tr>
 								<tr>
-									<th class="anio">Anio</th>
+									<th class="anio">Año</th>
 									<td class="anio">
-										<input type="text" size="60" placeholder="Ingresar Nombre" name="anio">
+										<input type="text" size="60" placeholder="Ingresar Año" name="anio">
 									</td>
 								</tr>
 								<tr>
 									<th class="consola-juego">Consola</th>
 									<td class="consola-juego">
 										<select name="consola">
-											<option value="1">PlayStation 3</option>
-											<option value="2">PlayStation 4</option>
-											<option value="3">Xbox ONE</option>
-											<option value="4">Nintendo Switch</option>
-											<option value="5">Nintendo 3DS</option>
+											<?php CargarConsolas(); ?>
 										</select>
 									</td>
 								</tr>
 								<tr>
-									<th class="descripcion-juego">Descripcion</th>
+									<th class="descripcion-juego">Descripción</th>
 									<td class="descripcion-juego">
-										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="descripcion" id="" cols="60" rows="5">
-										
-										</textarea>
+										<textarea name="descripcion" id="" cols="60" rows="5"></textarea>
 									</td>
 								</tr>
 								<tr>
@@ -117,18 +110,7 @@
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="Cantidad">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-										</select>
+										<input type="number" name="cantidad" min="1" max="50">
 									</td>
 								</tr>
 								<tr>
@@ -139,12 +121,12 @@
 								</tr>
 
 								<tr>
-									<th class="imagen-juego">Imagen</th>
+									<th class="imagen-juego">Imágen</th>
 									<td>
-										<form enctype="multipart/form-data" action="uploader.php" method="POST">
-										<input name="uploadedfile" type="file" />
-										<input type="submit" value="Subir archivo" />
-										</form>
+										
+										<input name="imagen" type="file"/>
+										<input type="submit" value="Subir archivo"/>
+										
 									</td>
 								</tr>
 							</thead>

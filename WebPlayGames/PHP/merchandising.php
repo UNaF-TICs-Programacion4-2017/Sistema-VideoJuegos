@@ -1,11 +1,7 @@
-
 <?php
-require_once 'Conexion.php';
-
 function InsertarMerchandising()
 {
-	
-	$Rela_tipo_producto = '4';
+	$Rela_tipo_producto = '2';
 	$genero = '';
 	$consola = '';
 	$link = '';
@@ -14,6 +10,7 @@ function InsertarMerchandising()
     $oUsuario->Datos = array('nombre');
     if($oUsuario->ComprobarDatos() == true)
     {
+    	$imagen = ObtenerImagen();
     	$oUsuario->Tabla = 'producto';	                        
 	  	$oUsuario->Datos = array(
 	  							'cantidad',
@@ -21,9 +18,12 @@ function InsertarMerchandising()
 	  							'descripcion',
 	  							'nombre',
 	  							'anio',
-	  							'v1'=>$link,
-	  							
-	  							'v4'=>$fecha
+	  							'v6'=>$link,
+	  							'v1'=>$Rela_tipo_producto,
+	  							'v4'=>$genero,
+	  							'v5'=>$consola,
+	  							'v2'=>$fecha,
+	  							'v3'=>$imagen
 	  							);
 	    $oUsuario->Insertar(); 
     }
