@@ -1,4 +1,36 @@
-<?php
+<?php 
+function ComprobarUsuario()
+{
+	$Array = array();
+	$Registro = new Conexion();
+	$Registro->Tabla = 'usuario';
+	$Registro->Datos = array('user','password');
+	if ($Registro->ComprobarDatos() == true) 
+	{
+		$User = $_POST['user'];
+		$Pass = $_POST['password'];
+		$ComprobarUser = new Conexion();
+		$ComprobarUser->Tabla = 'usuario';
+		$ComprobarUser->Datos = array('nombre');
+		$ComprobarUser->Condicion = "nombre = '$User'";
+		$Consulta = $ComprobarUser->CantidadRegistro();
+		if ($Consulta <> '0') 
+		{
+			header('location: index.php');
+		}
+		else
+		{
+			$Array[0] = $User;
+			$Array[1] = $Pass;
+		}
+	}
+	else
+	{
+		$Array[0] = 'NULL';
+		$Array[1] = 'NULL';
+	}
+	return $Array;
+}
 function CargarConsolas()
 {
 	$oConsola = new Conexion();
@@ -50,30 +82,4 @@ function CargarGeneros()
 	 	}
 	 	echo "<option value='$ID'>$Descripcion</option>";
 	}
-}
-function InsertarJuego()
-{
-	$Rela_tipo_producto = '4';
-    $fecha = date_format(date_create(date("Y-m-d")),'Y-m-d');
-    $oUsuario = new Conexion();
-    $oUsuario->Datos = array('nombre');
-    if($oUsuario->ComprobarDatos() == true)
-    {
-    	$imagen = ObtenerImagen();
-    	$oUsuario->Tabla = 'producto';	                        
-	  	$oUsuario->Datos = array(
-	  							'cantidad',
-	  							'precio',
-	  							'descripcion',
-	  							'nombre',
-	  							'anio',
-	  							'linkyoutube',
-	  							'v1'=>$Rela_tipo_producto,
-	  							'genero',
-	  							'consola',
-	  							'v2'=>$fecha,
-	  							'v3'=>$imagen
-	  							);
-	    $oUsuario->Insertar(); 
-    }
 }
