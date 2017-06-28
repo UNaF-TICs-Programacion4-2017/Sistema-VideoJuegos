@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php include 'PHP/Clases.php';?>
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -72,20 +73,20 @@
 							<header>
 								<h2 class="section-title">Insertar Consola Nueva</h2>
 							</header>
-							<form method="POST">
+							<form  method="POST">
 						<table class="insert-juego">
 							<thead>
 								<tr>
 									<th class="nombre-juego">Nombre</th>
 									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre">
+										<input type="text" size="60" placeholder="Ingresar Nombre" name="nombre">
 									</td>
 								</tr>
 								<tr>
 									<th class="descripcion-juego">Descripcion</th>
 									<td class="descripcion-juego">
 										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="" id="" cols="60" rows="5">
+										<textarea name="descripcion" id="" cols="60" rows="5">
 										
 										</textarea>
 									</td>
@@ -93,19 +94,19 @@
 								<tr>
 									<th class="anio-juego">Anio</th>
 									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Anio">
+										<input type="text" size="10" placeholder="Ingresar Anio" name="anio">
 									</td>
 								</tr>
 								<tr>
 									<th class="precio-juego">Precio</th>
 									<td class="precio-juego">
-										<input type="text" size="15" placeholder="Ingresar Precio en $">
+										<input type="text" size="15" placeholder="Ingresar Precio en $" name="precio">
 									</td>
 								</tr>
 								<tr>
 									<th class="canidad-juego">Cantidad</th>
 									<td class="canidad-juego">
-										<select name="#">
+										<select name="cantidad">
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -122,7 +123,7 @@
 								<tr>
 									<th class="linkyoutube-juego">Link YouTube</th>
 									<td class="linkyoutube-juego">
-										<input type="text" size="60" placeholder="Ingresar URL YouTube">
+										<input type="text" size="60" placeholder="Ingresar URL YouTube" name="linkyoutube">
 									</td>
 								</tr>
 
@@ -148,12 +149,7 @@
 						</table> 
 						</form>
 						<?php
-						  
-	                       $Usuario = new Conexion();
-	                       $Usuario->Tabla = 'consola';
-	                      
-	                       $Usuario->Datos = array('userBD','passwordBD','v'=>$Rela_Tipo_Usuario);
-	                       $Usuario->Insertar();
+					      InsertarConsola();
                           ?>
 
 

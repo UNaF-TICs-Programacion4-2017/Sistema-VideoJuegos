@@ -147,7 +147,10 @@
 							
 						</table> 
                             </form>
-                            <?php InsertarJuego(); ?>                                     
+                            <?php 
+                            InsertarJuego();
+                            
+                             ?>                                     
 						</section>
 						
 					</div>
