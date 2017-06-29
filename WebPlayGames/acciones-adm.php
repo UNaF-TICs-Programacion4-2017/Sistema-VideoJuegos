@@ -80,41 +80,32 @@
 								<h2 class="section-title">Acciones de Administrador</h2>
 							</header>
 							<form method="POST" enctype="multipart/form-data"> 
-								<table class="acciones-adm">			
+								<table class="acciones-adm">
+								<h2 class="section-title">Agregar</h2>			
 									<tbody>
 										<tr>
 											<td>
-												<a href="insertcliente.php" class="button">Agregar Cliente Nuevo</a>
+												<a href="insertcliente.php" class="button">Agregar Cliente</a>
 											</td>
-										</tr>
-										<tr>
 											<td>
-												<a href="insertjuego.php" class="button">Agregar Juego Nuevo</a>
+												<a href="insertjuego.php" class="button">Agregar Juego</a>
+											</td>	
+											<td>
+												<a href="insertconsola.php" class="button">Agregar Consola</a>
 											</td>
-										</tr>
-										<tr>
 											<td>
-												<a href="insertconsola.php" class="button">Agregar Consola Nueva</a>
+												<a href="insertaccesorio.php" class="button">Agregar Accesorio</a>
 											</td>
-										</tr>
-										<tr>
 											<td>
-												<a href="insertaccesorio.php" class="button">Agregar Accesorio Nuevo</a>
+												<a href="insertmerchandising.php" class="button">Agregar Merchandising</a>
 											</td>
-										</tr>
-										<tr>
 											<td>
-												<a href="insertmerchandising.php" class="button">Agregar Merchandising Nuevo</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="insertfiguradeaccion.php" class="button">Agregar Figura de Accion Nueva</a>
+												<a href="insertfiguradeaccion.php" class="button">Agregar Figura de Accion</a>
 											</td>
 										</tr>
 									</tbody>
 								</table>
-                            </form>                                  
+                            </form>                                    
 						</section>
 						
 					</div>

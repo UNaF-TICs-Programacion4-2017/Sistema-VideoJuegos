@@ -337,7 +337,7 @@ form textarea {
   background: #C40000;
   color: white;
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
   border-radius: 3px;
   -webkit-transition: .3s ease;
           transition: .3s ease;
@@ -2438,6 +2438,7 @@ form textarea {
 }
 .product-list .product {
   width: 25%;
+
   padding: 0 15px;
   float: left;
   margin-bottom: 30px;
@@ -2454,6 +2455,8 @@ form textarea {
 }
 .product-list .product .inner-product {
   background: white;
+  width: 262.5px;
+  height: 512.09px;
   padding: 30px;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -2823,7 +2826,7 @@ table.insert-juego .fa-times {
 table.acciones-adm {
   border-collapse: separate;
   border-spacing: 0 5px;
-  width:22%;
+  width:100%;
   margin: 0 0 5px;
   padding: 0;
 }
