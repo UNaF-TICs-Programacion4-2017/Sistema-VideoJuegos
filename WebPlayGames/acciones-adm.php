@@ -52,7 +52,7 @@
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
+							<li class="menu-item home current-menu-item"><a href="acciones-adm.php"><i class="icon-home"></i></a></li>
 							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
 							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
 							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
