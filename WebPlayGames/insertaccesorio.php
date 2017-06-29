@@ -46,7 +46,7 @@
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
 						<a href="index.php">(Cerrar Sesión)</a>
-					</div> <!-- .right-section -->s
+					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>

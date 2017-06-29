@@ -1,3 +1,7 @@
+<?php 
+	include 'PHP/Clases.php'; 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -35,11 +39,14 @@
 							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
-
+					<div class="left-section pull-left">
+						<div class="widget">
+							<h3 class="widget-title"> Bienvenido: <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></h3>
+						</div>
+					</div>
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#">My Account</a>
-						<a href="#">Logout <small>(John Smith)</small></a>
+						<a href="index.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
@@ -70,6 +77,7 @@
 					<div class="page">
 						<div class="filter-bar">
 							<div class="filter">
+							<form action="" method="POST">
 								<span>
 									<label>Mostrar:</label>
 									<select name="#">
@@ -78,6 +86,10 @@
 										<option value="#">24</option>
 									</select>
 								</span>
+								<span>
+									<input type="submit" value="Filtrar">
+								</span>
+								</form>
 							</div> <!-- .filter -->
 
 							<div class="pagination">
@@ -92,115 +104,11 @@
 						</div> <!-- .filter-bar -->
 						
 						<div class="product-list">
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-1.jpg" alt="Game 1"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-2.jpg" alt="Game 2"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-3.jpg" alt="Game 3"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-4.jpg" alt="Game 4"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
 								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-5.jpg" alt="Game 1"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Watch Dogs</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->	
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-6.jpg" alt="Game 2"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Mortal Kombat X</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-7.jpg" alt="Game 3"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
-								
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-8.jpg" alt="Game 4"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Nascar '14</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-								
+								<?php FiltrarMerchandising(); ?>
 							</div> <!-- .product-list -->
 
-						<div class="pagination-bar">
+					<!--	<div class="pagination-bar">
 							<div class="pagination">
 								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
 								<span class="page-number current">1</span>
@@ -209,7 +117,7 @@
 								<a href="#" class="page-number">...</a>
 								<a href="#" class="page-number">12</a>
 								<a href="#" class="page-number"><i class="fa fa-angle-right"></i></a>
-							</div> <!-- .pagination -->
+							</div>  -->
 						</div>
 					</div>
 				</div> <!-- .container -->
