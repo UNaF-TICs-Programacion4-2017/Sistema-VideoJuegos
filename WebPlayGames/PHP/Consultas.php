@@ -1,5 +1,6 @@
 <?php 
 error_reporting(0);
+/////////////////////////
 function ComprobarUsuario()
 {
 	$Array = array();
@@ -32,6 +33,7 @@ function ComprobarUsuario()
 	}
 	return $Array;
 }
+/////////////////////////
 function CargarConsolas()
 {
 	$oConsola = new Conexion();
@@ -165,6 +167,7 @@ function CargarGeneros()
 	 	echo "<option value='$ID'>$Descripcion</option>";
 	}
 }
+////////////////////////////
 function FiltrarAccesorios()
 {
 	$oCantidad = new Conexion();
@@ -531,6 +534,7 @@ function FiltrarFAccion()
 		}
 	}
 }
+/////////////////////////////////
 function CargarProductoCompleto($A,$B)
 {
 	$oCantidad = new Conexion();
@@ -613,6 +617,7 @@ function CargarProductoCompleto($A,$B)
 		}
 	}
 }
+/////////////////////////////////
 function FIltrarNuevosProductos()
 {
 	$FechaActual = date('Ymj');
@@ -660,5 +665,162 @@ function FIltrarNuevosProductos()
 					<span>No se obtuvieron resultados</span>
 				</div>";
 		}
+	}
+}
+/////////////////////////////////
+function CargarPesonas()
+{
+	$oPersona = new Conexion();
+	$oPersona->Tabla = 'persona';
+	$oPersona->Datos = array('id','nombre');
+	$oPersona->Condicion = "";
+	$Consulta = $oPersona->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
+	}
+}
+function CargarProdJuegos()
+{
+	$oJuego = new Conexion();
+	$oJuego->Tabla = 'producto';
+	$oJuego->Datos = array('id','nombre');
+	$oJuego->Condicion = "rela_tipo_producto = '4'";
+	$Consulta = $oJuego->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
+	}
+}
+function CargarProdConsolas()
+{
+	$oConsola = new Conexion();
+	$oConsola->Tabla = 'producto';
+	$oConsola->Datos = array('id','nombre');
+	$oConsola->Condicion = "rela_tipo_producto = '1'";
+	$Consulta = $oConsola->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
+	}
+}
+function CargarProdAccesorio()
+{
+	$oAcc = new Conexion();
+	$oAcc->Tabla = 'producto';
+	$oAcc->Datos = array('id','nombre');
+	$oAcc->Condicion = "rela_tipo_producto = '3'";
+	$Consulta = $oAcc->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
+	}
+}
+function CargarProdMercha()
+{
+	$oMercha = new Conexion();
+	$oMercha->Tabla = 'producto';
+	$oMercha->Datos = array('id','nombre');
+	$oMercha->Condicion = "rela_tipo_producto = '2'";
+	$Consulta = $oMercha->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
+	}
+}
+function CargarProdFAccion()
+{
+	$oAccion = new Conexion();
+	$oAccion->Tabla = 'producto';
+	$oAccion->Datos = array('id','nombre');
+	$oAccion->Condicion = "rela_tipo_producto = '5'";
+	$Consulta = $oAccion->ObtenerFila();
+	$ID = '';
+	$Nombre = '';
+	foreach ($Consulta as $key => $Columna) 
+	{
+
+ 		foreach ($Columna as $Fila) 
+ 		{
+ 			if(!is_numeric($Fila))
+ 			{
+ 				$Nombre = $Fila;
+ 	    	}
+ 	    	else
+ 	    	{
+ 	    		$ID = $Fila;
+ 	    	}
+	 	}
+	 	echo "<option value='$ID'>$Nombre</option>";
 	}
 }
