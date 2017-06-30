@@ -1,6 +1,6 @@
 <?php 
-include 'PHP/Clases.php';
-session_destroy();
+	include 'PHP/Clases.php'; 
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@ session_destroy();
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Play Games | Inicio</title>
+		<title>Ecommerce Video Game</title>
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|" rel="stylesheet" type="text/css">
@@ -20,7 +20,6 @@ session_destroy();
 		<link rel="stylesheet" href="styleeze.css">
 		
 		<!--[if lt IE 9]>
-		Hola mundosdadsdadsasda
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
@@ -29,26 +28,34 @@ session_destroy();
 
 
 	<body class="slider-collapse">
+
 		<div id="site-content">
+
 			<div class="site-header">
+
 				<div class="container">
-					<a href="index.php" id="branding">
+					<a href="index-logged.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
 						<div class="logo-text">
 							<h1 class="site-title">PLAY GAMES</h1>
 							<small class="site-description">Venta de Videojuegos y Accesorios</small>
 						</div>
 					</a> <!-- #branding -->
-
+					<div class="left-section pull-left">
+						<div class="widget">
+							<h3 class="widget-title"> Bienvenido: <?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></h3>
+						</div>
+					</div>
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="#" class="login-button">Ingresar/Registrarse</a>
+						<a href="acciones-adm.php" class="cart">Acciones</a>
+						<a href="index.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
+							<li class="menu-item home current-menu-item"><a href="index-logged.php"><i class="icon-home"></i></a></li>
 							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
 							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
 							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
@@ -59,7 +66,7 @@ session_destroy();
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
-							<input type="text" placeholder="Buscar...">
+							<input type="text" placeholder="Search...">
 						</div> <!-- .search-form -->
 
 						<div class="mobile-navigation"></div> <!-- .mobile-navigation -->
@@ -152,9 +159,75 @@ session_destroy();
 							</header>
 
 							<div class="product-list">
-								<?php FIltrarNuevosProductos(); ?>
-
+							<?php FIltrarNuevosProductos(); ?>
 								
+
+							</div> <!-- .product-list -->
+
+						</section>
+
+						<section>
+							<header>
+								<h2 class="section-title">Promociones</h2>
+								<a href="#" class="all">Show All</a>
+							</header>
+
+							<div class="product-list">
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.php"><img src="dummy/game-5.jpg" alt="Game 1"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Watch Dogs</a></h3>
+										<small class="price">$19.00</small>
+										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
+										<a href="cart.php" class="button">Reservar</a>
+										<a href="#" class="button muted">Read Details</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.php"><img src="dummy/game-6.jpg" alt="Game 2"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Mortal Kombat X</a></h3>
+										<small class="price">$19.00</small>
+										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
+										<a href="cart.php" class="button">Reservar</a>
+										<a href="#" class="button muted">Read Details</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.php"><img src="dummy/game-7.jpg" alt="Game 3"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Metal Gear Solid V</a></h3>
+										<small class="price">$19.00</small>
+										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
+										<a href="cart.php" class="button">Add to cart</a>
+										<a href="#" class="button muted">Read Details</a>
+									</div>
+								</div> <!-- .product -->
+								
+								
+								<div class="product">
+									<div class="inner-product">
+										<div class="figure-image">
+											<a href="single.php"><img src="dummy/game-8.jpg" alt="Game 4"></a>
+										</div>
+										<h3 class="product-title"><a href="#">Nascar '14</a></h3>
+										<small class="price">$19.00</small>
+										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
+										<a href="cart.php" class="button">Reservar</a>
+										<a href="#" class="button muted">Read Details</a>
+									</div>
+								</div> <!-- .product -->
 								
 							</div> <!-- .product-list -->
 
@@ -211,7 +284,7 @@ session_destroy();
 								</form>
 							</div> <!-- .widget -->
 						</div> <!-- column -->
-					</div><!-- .row -->
+					</div><!-- .row --> 
 
 					<div class="colophon">
 						<div class="copy">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</div>
@@ -232,27 +305,28 @@ session_destroy();
 			<a href="#" class="close"><i class="fa fa-times"></i></a>
 			<div class="row">
 				<div class="col-md-6">
-					<h2 class="section-title">Ingresar</h2>
-					<form action="login.php" method="POST">
-						<input type="text" placeholder="Ingrese usuario..." name="user_ingresar">
-						<input type="password" placeholder="Ingrese contraseña..." name="pass_ingresar">
-						<input type="submit" value="Ingresar">
+					<h2 class="section-title">Login</h2>
+					<form action="#">
+						<input type="text" placeholder="Username...">
+						<input type="password" placeholder="Password...">
+						<input type="submit" value="Login">
 					</form>
-
 				</div> <!-- .column -->
 				<div class="col-md-6">
-					<h2 class="section-title">Crear una cuenta</h2>
-					<form action="insertcliente.php" method="POST">
-						<input type="text" placeholder="Ingrese usuario..." name="user" required>
-						<input type="password" placeholder="Ingrese contraseña..." name="password" required>
-						<input type="submit" value="Registrar">
+					<h2 class="section-title">Create an account</h2>
+					<form action="#">
+						<input type="text" placeholder="Username...">
+						<input type="text" placeholder="Email address...">
+						<input type="submit" value="register">
 					</form>
-				</div> <!-- .column -asasasas->
-			</div> <!-- .holis -->
+				</div> <!-- .column -->
+			</div> <!-- .row -->
 		</div> <!-- .auth-popup -->
+
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>	
+		<script src="js/app.js"></script>
+		
 	</body>
 
 </html>

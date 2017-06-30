@@ -21,7 +21,7 @@ if ($_POST['user_ingresar'] <> '' && $_POST['pass_ingresar'] <> '')
 	elseif($BDUser == $User && $BDPass == $Pass && $BDTipoUser == '2')
 	{
 		$_SESSION['username'] = $BDUser;
-		header('location: acciones-adm.php');
+		header('location: index-logged-adm.php');
 	}
 	else
 	{
