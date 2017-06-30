@@ -34,7 +34,7 @@
 			<div class="site-header">
 
 				<div class="container">
-					<a href="index.php" id="branding">
+					<a href="index-logged.php" id="branding">
 						<img src="images/logo5.png" alt="" class="logo">
 						<div class="logo-text">
 							<h1 class="site-title">PLAY GAMES</h1>
@@ -54,7 +54,7 @@
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
+							<li class="menu-item home current-menu-item"><a href="index-logged.php"><i class="icon-home"></i></a></li>
 							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
 							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
 							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
@@ -158,57 +158,7 @@
 							</header>
 
 							<div class="product-list">
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-1.jpg" alt="Game 1"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Alpha Protocol</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-2.jpg" alt="Game 2"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Grand Theft Auto V</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-3.jpg" alt="Game 3"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Need for Speed rivals</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
-
-								<div class="product">
-									<div class="inner-product">
-										<div class="figure-image">
-											<a href="single.php"><img src="dummy/game-4.jpg" alt="Game 4"></a>
-										</div>
-										<h3 class="product-title"><a href="#">Big game hunter</a></h3>
-										<small class="price">$19.00</small>
-										<p>Lorem ipsum dolor sit consectetur adipiscing elit do eiusmod tempor...</p>
-										<a href="cart.php" class="button">Reservar</a>
-										<a href="#" class="button muted">Read Details</a>
-									</div>
-								</div> <!-- .product -->
+							<?php FIltrarNuevosProductos(); ?>
 
 							</div> <!-- .product-list -->
 
