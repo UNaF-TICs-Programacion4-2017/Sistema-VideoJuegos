@@ -78,76 +78,29 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Agregar Cliente Nuevo</h2>
+								<h2 class="section-title">Eliminar Cliente</h2>
 							</header>
-							<?php 
-								$Vector = ComprobarUsuario();
-								$Nombre = $Vector[0];
-								$Password = $Vector[1];
-							?>
-							<form action="loginnew.php" method="POST">
-								<table class="insert-juego">
+							<form method="POST" enctype="multipart/form-data">    
+						<table class="delete-juego">
 							<thead>
 								<tr>
-									<th class="nombre-juego">Nombre y Apellido</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre y Apellido" name="nombre_apellido">
+									<th class="Cliente">Cliente</th>
+									<td class="Cliente">
+
+										<select name="genero">
+											<?php CargarGeneros(); ?>
+										</select>
 									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">DNI</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar DNI" name="dni">
-									</td>
-								</tr>
-								<tr>
-									<th class="anio-juego">Fecha de Nacimiento</th>
-									<td class="anio-juego">
-										<input type="date" name="fecha_nac">
-									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">Teléfono</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Telefono" name="telefono">
-									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">Email</th>
-									<td class="nombre-juego">
-										<input type="email" size="60" placeholder="Ingresar Email" name="email">
-									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">Dirección</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Direccion" name="direccion">
-									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">Nombre de Usuario</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Usuario" value="<?php echo $Nombre; ?>" name="userBD">
-									</td>
-								</tr>
-								<tr>
-									<th class="nombre-juego">Contraseña</th>
-									<td class="nombre-juego">
-										<input type="password" size="60" placeholder="Ingresar Contrasenia" value="<?php echo $Password; ?>" name="passwordBD">
-									</td>
-								</tr>
-			
-							</thead>
-							<tbody>
-								<tr>
 									<td>
-										<input type="submit" value="Cargar Registro">
+										<input type="submit" value="Eliminar Cliente">
 									</td>
 								</tr>
-							</tbody>
-							
+							</thead>							
 						</table> 
-							</form>
+                            </form>
+                            <?php 
+                            InsertarJuego();
+                             ?>                                     
 						</section>
 						
 					</div>
