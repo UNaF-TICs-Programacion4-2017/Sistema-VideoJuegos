@@ -105,7 +105,7 @@
 						
 						<div class="product-list">
 								
-								<?php FiltrarFAccion(); ?>	
+								<?php CargarProductoCompleto(5,0); ?>	
 							</div> <!-- .product-list -->
 
 					<!--	<div class="pagination-bar">

@@ -105,7 +105,7 @@
 						
 						<div class="product-list">
 								
-								<?php FiltrarMerchandising(); ?>
+								<?php CargarProductoCompleto(2,0); ?>
 							</div> <!-- .product-list -->
 
 					<!--	<div class="pagination-bar">

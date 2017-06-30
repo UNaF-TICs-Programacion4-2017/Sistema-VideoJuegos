@@ -117,7 +117,7 @@
 						
 						<div class="product-list">
 								
-								<?php FiltrarJuegoXBOX(); ?>
+								<?php CargarProductoCompleto(4,2); ?>
 							</div> <!-- .product-list -->
 
 						<!-- <div class="pagination-bar">

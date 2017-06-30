@@ -116,7 +116,7 @@
 						</div> <!-- .filter-bar -->
 						
 						<div class="product-list">
-								<?php FiltrarJuegoNintendo(); ?>
+								<?php CargarProductoCompleto(4,3); ?>
 								
 							</div> <!-- .product-list -->
 

@@ -89,7 +89,6 @@ class Conexion
 			echo $ex->getMessage();
 			exit;
 		}
-
 	}
 	public function Actualizar()
 	{
@@ -163,10 +162,12 @@ class Conexion
 			if ($this->Condicion <> '') 
 			{
 				$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
+
 			}
 			else
 			{
 				$Consulta = "SELECT $Columnas FROM $this->Tabla";
+				echo $Consulta;
 			}
 			if ($Columnas == '*') 
 			{
