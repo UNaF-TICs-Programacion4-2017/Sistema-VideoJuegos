@@ -78,15 +78,15 @@
 							<header>
 								<h2 class="section-title">Eliminar Consola</h2>
 							</header>
-							<form method="POST" enctype="multipart/form-data">    
+							<form method="POST">    
 						<table class="delete-juego">
 							<thead>
 								<tr>
 									<th class="Consola">Consola</th>
 									<td class="Consola">
 
-										<select name="genero">
-											<?php CargarGeneros(); ?>
+										<select name="ID_Consola">
+											<?php CargarProdConsolas(); ?>
 										</select>
 									</td>
 									<td>
@@ -97,7 +97,7 @@
 						</table> 
                             </form>
                             <?php 
-                            InsertarJuego();
+                            EliminarConsola();
                              ?>                                     
 						</section>
 						

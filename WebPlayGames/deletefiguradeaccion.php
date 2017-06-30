@@ -79,15 +79,15 @@
 							<header>
 								<h2 class="section-title">Eliminar Figura de Accion</h2>
 							</header>
-							<form method="POST" enctype="multipart/form-data">    
+							<form method="POST">    
 						<table class="delete-juego">
 							<thead>
 								<tr>
 									<th class="figura">Figura de Accion</th>
 									<td class="figura">
 
-										<select name="genero">
-											<?php CargarGeneros(); ?>
+										<select name="ID_Accion">
+											<?php CargarProdFAccion(); ?>
 										</select>
 									</td>
 									<td>
@@ -98,7 +98,7 @@
 						</table> 
                             </form>
                             <?php 
-                            InsertarJuego();
+                            EliminarFAccion();
                              ?>                                     
 						</section>
 						
