@@ -46,13 +46,13 @@
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
 							<li class="menu-item home current-menu-item"><a href="index.php"><i class="icon-home"></i></a></li>
-							<li class="menu-item"><a href="products.php">Accesorios</a></li>
-							<li class="menu-item"><a href="products.php">Consolas</a></li>
-							<li class="menu-item"><a href="products.php">Playstation</a></li>
-							<li class="menu-item"><a href="products.php">Xbox</a></li>
-							<li class="menu-item"><a href="products.php">Nintendo</a></li>
-							<li class="menu-item"><a href="products.php">Merchandising</a></li>
-							<li class="menu-item"><a href="products.php">Figuras de Accion</a></li>
+							<li class="menu-item"><a href="productoaccesorio.php">Accesorios</a></li>
+							<li class="menu-item"><a href="productoconsola.php">Consolas</a></li>
+							<li class="menu-item"><a href="productoplaystation.php">Playstation</a></li>
+							<li class="menu-item"><a href="productoxbox.php">Xbox</a></li>
+							<li class="menu-item"><a href="productonintendo.php">Nintendo</a></li>
+							<li class="menu-item"><a href="productomerchandising.php">Merchandising</a></li>
+							<li class="menu-item"><a href="productofiguradeaccion.php">Figuras de Accion</a></li>
 						</ul> <!-- .menu -->
 						<div class="search-form">
 							<label><img src="images/icon-search.png"></label>
@@ -117,7 +117,7 @@
 						
 						<section>
 							<header>
-								<h2 class="section-title">Otros Productos</h2>
+								<h2 class="section-title">Nuevos Productos</h2>
 							</header>
 							<div class="product-list">
 								<div class="product">
