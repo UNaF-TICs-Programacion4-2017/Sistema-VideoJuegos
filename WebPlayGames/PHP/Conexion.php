@@ -122,17 +122,8 @@ class Conexion
 	{
 		try 
 		{
-			if ($this->ComprobarDatos() == true) 
-			{
-				$Cadena = '';
-				foreach ($this->Condicion as $Sentencia) 
-				{
-					$Cadena = $Cadena.$Sentencia[0].$Sentencia[1]."'".$Sentencia[2]."'"." AND ";
-				}
-				$Cadena = substr($Cadena, 0, -4);
-				$Consulta = "DELETE FROM $this->Tabla WHERE $Cadena";
-				$this->Ejecutar($Consulta,"");	
-			}
+			$Consulta = "DELETE FROM $this->Tabla WHERE $this->Condicion";
+			$this->Ejecutar($Consulta,"");	
 		}
 		catch (PDOException $ex) 
 		{
