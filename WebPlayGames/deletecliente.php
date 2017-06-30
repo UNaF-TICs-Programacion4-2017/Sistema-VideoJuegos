@@ -80,15 +80,15 @@
 							<header>
 								<h2 class="section-title">Eliminar Cliente</h2>
 							</header>
-							<form method="POST" enctype="multipart/form-data">    
+							<form method="POST">    
 						<table class="delete-juego">
 							<thead>
 								<tr>
 									<th class="Cliente">Cliente</th>
 									<td class="Cliente">
 
-										<select name="genero">
-											<?php CargarGeneros(); ?>
+										<select name="ID_Persona">
+											<?php CargarPesonas(); ?>
 										</select>
 									</td>
 									<td>
@@ -99,7 +99,7 @@
 						</table> 
                             </form>
                             <?php 
-                            InsertarJuego();
+                            EliminarPersona();
                              ?>                                     
 						</section>
 						

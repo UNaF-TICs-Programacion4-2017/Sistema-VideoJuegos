@@ -85,8 +85,8 @@
 									<th class="juego">Juego</th>
 									<td class="juego">
 
-										<select name="genero">
-											<?php CargarGeneros(); ?>
+										<select name="ID_Juego">
+											<?php CargarProdJuegos(); ?>
 										</select>
 									</td>
 									<td>
@@ -97,7 +97,7 @@
 						</table> 
                             </form>
                             <?php 
-                            InsertarJuego();
+                            EliminarJuego();
                              ?>                                     
 						</section>
 						

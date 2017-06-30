@@ -672,7 +672,7 @@ function CargarPesonas()
 {
 	$oPersona = new Conexion();
 	$oPersona->Tabla = 'persona';
-	$oPersona->Datos = array('id','nombre');
+	$oPersona->Datos = array('id','nombre_apellido');
 	$oPersona->Condicion = "";
 	$Consulta = $oPersona->ObtenerFila();
 	$ID = '';
