@@ -113,22 +113,22 @@
 									<tbody>
 										<tr>
 											<td>
-												<a href="insertcliente.php" class="button">Eliminar Cliente</a>
+												<a href="deletecliente.php" class="button">Eliminar Cliente</a>
 											</td>
 											<td>
-												<a href="insertjuego.php" class="button">Eliminar Juego</a>
+												<a href="deletejuego.php" class="button">Eliminar Juego</a>
 											</td>	
 											<td>
-												<a href="insertconsola.php" class="button">Eliminar Consola</a>
+												<a href="deleteconsola.php" class="button">Eliminar Consola</a>
 											</td>
 											<td>
-												<a href="insertaccesorio.php" class="button">Eliminar Accesorio</a>
+												<a href="deleteaccesorio.php" class="button">Eliminar Accesorio</a>
 											</td>
 											<td>
-												<a href="insertmerchandising.php" class="button">Eliminar Merchandising</a>
+												<a href="deletemerchandising.php" class="button">Eliminar Merchandising</a>
 											</td>
 											<td>
-												<a href="insertfiguradeaccion.php" class="button">Eliminar Figura de Accion</a>
+												<a href="deletefiguradeaccion.php" class="button">Eliminar Figura de Accion</a>
 											</td>
 										</tr>
 									</tbody>

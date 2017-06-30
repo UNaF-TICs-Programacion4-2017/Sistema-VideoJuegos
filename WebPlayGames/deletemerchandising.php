@@ -76,66 +76,29 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Agregar Merchandising Nuevo</h2>
+								<h2 class="section-title">Eliminar Merchandising</h2>
 							</header>
-							<form method="POST" enctype="multipart/form-data">
-						<table class="insert-juego">
+							<form method="POST" enctype="multipart/form-data">    
+						<table class="delete-juego">
 							<thead>
 								<tr>
-									<th class="nombre-juego">Nombre</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre" name="nombre">
-									</td>
-								</tr>
+									<th class="juego">Merchandising</th>
+									<td class="juego">
 
-								<tr>
-									<th class="anio">Año</th>
-									<td class="anio">
-										<input type="text" size="60" placeholder="Ingresar Año" name="anio">
+										<select name="genero">
+											<?php CargarGeneros(); ?>
+										</select>
 									</td>
-								</tr>
-
-								<tr>
-									<th class="descripcion-juego">Descripción</th>
-									<td class="descripcion-juego">
-										<textarea name="descripcion" id="" cols="60" rows="5"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="precio-juego">Precio</th>
-									<td class="precio-juego">
-										<input type="text" size="15" placeholder="Ingresar Precio en $" name="precio">
-									</td>
-								</tr>
-								<tr>
-									<th class="canidad-juego">Cantidad</th>
-									<td class="canidad-juego">
-										<input type="number" name="cantidad" min="1" max="50">
-									</td>
-								</tr>
-								<tr>
-									<th class="imagen-juego">Imágen</th>
 									<td>
-										
-										<input name="imagen" type="file"/>
-										
-										
+										<input type="submit" value="Eliminar Merchandising">
 									</td>
 								</tr>
-							</thead>
-							<tbody>
-								<tr>
-										<td>
-											<input type="submit" value="Cargar Registro">
-										</td>
-								</tr>
-							</tbody>
-							
+							</thead>							
 						</table> 
-                         </form>
-                         <?php
-                          InsertarMerchandising();
-                         ?>
+                            </form>
+                            <?php 
+                            InsertarJuego();
+                             ?>                                     
 						</section>
 						
 					</div>

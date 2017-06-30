@@ -76,79 +76,24 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Agregar Juego Nuevo</h2>
+								<h2 class="section-title">Eliminar Juego</h2>
 							</header>
 							<form method="POST" enctype="multipart/form-data">    
-						<table class="insert-juego">
+						<table class="delete-juego">
 							<thead>
 								<tr>
-									<th class="nombre-juego">Nombre</th>
-									<td class="nombre-juego">
-										<input type="text" size="60" placeholder="Ingresar Nombre" name="nombre">
-									</td>
-								</tr>
-								<tr>
-									<th class="consola-juego">Consola</th>
-									<td class="consola-juego">
-										<select name="consola">
-											<?php CargarConsolas(); ?>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<th class="genero-juego">Género</th>
-									<td class="genero-juego">
+									<th class="juego">Juego</th>
+									<td class="juego">
 
 										<select name="genero">
 											<?php CargarGeneros(); ?>
 										</select>
 									</td>
-								</tr>
-								<tr>
-									<th class="descripcion-juego">Descripción</th>
-									<td class="descripcion-juego">
-										<textarea name="descripcion" id="" cols="50" rows="5" placeholder="Ingrese la descripción del juego"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="anio-juego">Año</th>
-									<td class="anio-juego">
-										<input type="text" size="10" placeholder="Ingresar Año" name="anio">
-									</td>
-								</tr>
-								<tr>
-									<th class="precio-juego">Precio</th>
-									<td class="precio-juego">
-										<input type="text" size="15" placeholder="Ingresar Precio en $" name="precio">
-									</td>
-								</tr>
-								<tr>
-									<th class="canidad-juego">Cantidad</th>
-									<td class="canidad-juego">
-										<input type="number" name="cantidad" min="1" max="50">
-									</td>
-								</tr>
-								<tr>
-									<th class="linkyoutube-juego">Link YouTube</th>
-									<td class="linkyoutube-juego">
-										<input type="text" size="60" placeholder="Ingresar URL YouTube" name="linkyoutube">
-									</td>
-								</tr>
-								<tr>
-									<th class="imagen-juego">Imágen</th>
-									<td>									
-										<input name="imagen" type="file">								
-									</td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
 									<td>
-										<input type="submit" value="Cargar Datos">
+										<input type="submit" value="Eliminar Juego">
 									</td>
 								</tr>
-							</tbody>
-							
+							</thead>							
 						</table> 
                             </form>
                             <?php 

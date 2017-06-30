@@ -77,63 +77,29 @@
 					<div class="page">
 					<section>
 							<header>
-								<h2 class="section-title">Agregar Figura de Acción Nueva</h2>
+								<h2 class="section-title">Eliminar Figura de Accion</h2>
 							</header>
-							<form action="" method="POST" enctype="multipart/form-data">
-						<table class="insert-juego">
+							<form method="POST" enctype="multipart/form-data">    
+						<table class="delete-juego">
 							<thead>
 								<tr>
-									<th class="nombre-juego">Nombre</th>
-									<td class="nombre-juego">
-										<input type="text" name="nombre" size="60" placeholder="Ingresar Nombre">
+									<th class="figura">Figura de Accion</th>
+									<td class="figura">
+
+										<select name="genero">
+											<?php CargarGeneros(); ?>
+										</select>
 									</td>
-								</tr>
-								<tr>
-									<th class="descripcion-juego">Descripción</th>
-									<td class="descripcion-juego">
-										<!--<input type="textarea" placeholder="Ingresar Descripcion">-->
-										<textarea name="descripcion" id="" cols="60" rows="5"></textarea>
-									</td>
-								</tr>
-								<tr>
-									<th class="anio-juego">Año</th>
-									<td class="anio-juego">
-										<input type="text" name="anio" size="10" placeholder="Ingresar Año">
-									</td>
-								</tr>
-								<tr>
-									<th class="precio-juego">Precio</th>
-									<td class="precio-juego">
-										<input type="text" size="15" name="precio" placeholder="Ingresar Precio en $">
-									</td>
-								</tr>
-								<tr>
-									<th class="canidad-juego">Cantidad</th>
-									<td class="canidad-juego">
-										<input type="number" name="cantidad" min="1" max="50">
-									</td>
-								</tr>
-								<tr>
-									<th class="imagen-juego">Imágen</th>
 									<td>
-										
-										<input name="imagen" type="file" />
-										
-										
+										<input type="submit" value="Eliminar Figura de Accion">
 									</td>
 								</tr>
-							</thead>
-							<tbody>
-								<tr>
-										<td>
-											<input type="submit" value="Cargar Registro">
-										</td>
-								</tr>
-							</tbody>
-							
+							</thead>							
 						</table> 
-							</form>
-							<?php InsertarFiguraAccion(); ?>
+                            </form>
+                            <?php 
+                            InsertarJuego();
+                             ?>                                     
 						</section>
 						
 					</div>
