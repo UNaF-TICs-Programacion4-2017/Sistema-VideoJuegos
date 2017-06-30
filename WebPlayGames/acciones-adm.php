@@ -109,33 +109,6 @@
 								<br>
 								<br>
 								<table class="acciones-adm">
-								<h2 class="section-title">Editar</h2>			
-									<tbody>
-										<tr>
-											<td>
-												<a href="insertcliente.php" class="button">Editar Cliente</a>
-											</td>
-											<td>
-												<a href="insertjuego.php" class="button">Editar Juego</a>
-											</td>	
-											<td>
-												<a href="insertconsola.php" class="button">Editar Consola</a>
-											</td>
-											<td>
-												<a href="insertaccesorio.php" class="button">Editar Accesorio</a>
-											</td>
-											<td>
-												<a href="insertmerchandising.php" class="button">Editar Merchandising</a>
-											</td>
-											<td>
-												<a href="insertfiguradeaccion.php" class="button">Editar Figura de Accion</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<br>
-								<br>
-								<table class="acciones-adm">
 								<h2 class="section-title">Eliminar</h2>			
 									<tbody>
 										<tr>
