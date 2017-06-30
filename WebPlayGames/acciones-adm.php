@@ -79,6 +79,7 @@
 							<header>
 								<h2 class="section-title">Acciones de Administrador</h2>
 							</header>
+							<br>
 							<form method="POST" enctype="multipart/form-data"> 
 								<table class="acciones-adm">
 								<h2 class="section-title">Agregar</h2>			
@@ -101,6 +102,60 @@
 											</td>
 											<td>
 												<a href="insertfiguradeaccion.php" class="button">Agregar Figura de Accion</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<br>
+								<table class="acciones-adm">
+								<h2 class="section-title">Editar</h2>			
+									<tbody>
+										<tr>
+											<td>
+												<a href="insertcliente.php" class="button">Editar Cliente</a>
+											</td>
+											<td>
+												<a href="insertjuego.php" class="button">Editar Juego</a>
+											</td>	
+											<td>
+												<a href="insertconsola.php" class="button">Editar Consola</a>
+											</td>
+											<td>
+												<a href="insertaccesorio.php" class="button">Editar Accesorio</a>
+											</td>
+											<td>
+												<a href="insertmerchandising.php" class="button">Editar Merchandising</a>
+											</td>
+											<td>
+												<a href="insertfiguradeaccion.php" class="button">Editar Figura de Accion</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<br>
+								<table class="acciones-adm">
+								<h2 class="section-title">Eliminar</h2>			
+									<tbody>
+										<tr>
+											<td>
+												<a href="insertcliente.php" class="button">Eliminar Cliente</a>
+											</td>
+											<td>
+												<a href="insertjuego.php" class="button">Eliminar Juego</a>
+											</td>	
+											<td>
+												<a href="insertconsola.php" class="button">Eliminar Consola</a>
+											</td>
+											<td>
+												<a href="insertaccesorio.php" class="button">Eliminar Accesorio</a>
+											</td>
+											<td>
+												<a href="insertmerchandising.php" class="button">Eliminar Merchandising</a>
+											</td>
+											<td>
+												<a href="insertfiguradeaccion.php" class="button">Eliminar Figura de Accion</a>
 											</td>
 										</tr>
 									</tbody>
