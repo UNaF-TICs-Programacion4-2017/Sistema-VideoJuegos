@@ -110,7 +110,10 @@
 						</div> <!-- .filter-bar -->
 						
 						<div class="product-list">
-								<?php FiltrarConsolas(); ?>
+								<?php 
+								
+								CargarProductoCompleto(1,0);
+								?>
 								<!--<div class="product">
 									<div class="inner-product">
 										<div class="figure-image">

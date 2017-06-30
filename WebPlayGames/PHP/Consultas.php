@@ -531,3 +531,134 @@ function FiltrarFAccion()
 		}
 	}
 }
+function CargarProductoCompleto($A,$B)
+{
+	$oCantidad = new Conexion();
+	$oCantidad->Tabla = 'producto';
+	$oCantidad->Datos = '*';
+	$oCantidad->Condicion = "rela_tipo_producto = '$A'";
+	$Cantidad = $oCantidad->CantidadRegistro();
+	if ($Cantidad > 0) 
+	{
+		if(!isset($_POST['consolas']))
+		{
+			$NumeroColumnas = 0;
+			$Consola = $_POST['consolas'];
+			$oFiltro = new Conexion();
+			$oFiltro->Tabla = 'producto';
+			$oFiltro->Datos = array('precio','descripcion','nombre','imagen');	
+			$oFiltro->Condicion = "rela_tipo_producto = '$A'";
+			$Tabla = $oFiltro->ObtenerFila();
+			foreach ($Tabla as $Columnas) 
+			{
+				++$NumeroColumnas;
+			}
+			if(!$Tabla[0][2] == '')
+			{
+				for ($i=0; $i < $NumeroColumnas; $i++) 
+				{ 
+					echo "<div class='product'>
+							<div class='inner-product'>
+								<div class='figure-image'>
+									<a href='single.php'><img src='".$Tabla[$i][3]."' alt='Game 1'></a>
+								</div>
+								<h3 class='product-title'><a href='#'>".$Tabla[$i][2]."</a></h3>
+								<small class='price'>$".$Tabla[$i][0]."</small>
+								<p>".$Tabla[$i][1]."</p>
+								<a href='cart.php' class='button'>Reservar</a>
+								<a href='#' class='button muted'>Read Details</a>
+							</div>
+						</div> ";
+				}
+			}
+			else
+			{
+				echo "<div class='pagination-bar'>
+							
+								<span>No se obtuvieron resultados</span>
+							
+						</div>";
+			}
+		}
+		else
+		{
+			if ($A == 3) 
+			{
+				FiltrarAccesorios();
+			}
+			elseif($A == 1)
+			{
+				FiltrarConsolas();
+			}
+			elseif($A == 2)
+			{
+				FiltrarMerchandising();
+			}
+			elseif($A == 4 && $B == 1)
+			{
+				FiltrarJuegoPlay();
+			}
+			elseif($A == 4 && $B == 2)
+			{
+				FiltrarJuegoXBOX();
+			}
+			elseif($A == 4 && $B == 3)
+			{
+				FiltrarJuegoNintendo();
+			}
+			else
+			{
+				FiltrarFAccion();
+			}
+		}
+	}
+}
+function FIltrarNuevosProductos()
+{
+	$FechaActual = date('Ymj');
+	$FechaLimite = strtotime ('-15 day',strtotime($FechaActual));
+	$FechaLimite = date ('Ymj',$FechaLimite);
+	$oCantidad = new Conexion();
+	$oCantidad->Tabla = 'producto';
+	$oCantidad->Datos = '*';
+	$oCantidad->Condicion = "fechaingreso BETWEEN '$FechaLimite' AND '$FechaActual'";
+	$Cantidad = $oCantidad->CantidadRegistro();
+	$Cantidad = 1;
+	if ($Cantidad > 0) 
+	{
+		$NumeroColumnas = 0;
+		$oFiltro = new Conexion();
+		$oFiltro->Tabla = 'producto';
+		$oFiltro->Datos = array('precio','descripcion','nombre','imagen');	
+		$oFiltro->Condicion = "fechaingreso BETWEEN '$FechaLimite' AND '$FechaActual'";
+		$Tabla = $oFiltro->ObtenerFila();
+		foreach ($Tabla as $Columnas) 
+		{
+			++$NumeroColumnas;
+		}
+		if(!$Tabla[0][2] == '')
+		{
+			for ($i=0; $i < $NumeroColumnas; $i++) 
+			{ 
+				echo "<div class='product'>
+						<div class='inner-product'>
+							<div class='figure-image'>
+								<a href='single.php'><img src='".$Tabla[$i][3]."' alt='Game 1'></a>
+							</div>
+							<h3 class='product-title'><a href='#''>".$Tabla[$i][2]."</a></h3>
+							<small class='price'>$".$Tabla[$i][0]."</small>
+							<p>".$Tabla[$i][1]."</p>
+							<a href='cart.php' class='button'>Reservar</a>
+							<a href='#' class='button muted'>Read Details</a>
+						</div>
+					</div>";
+			}
+		}
+		else
+		{
+			echo "<div class='pagination-bar'>
+					<span>No se obtuvieron resultados</span>
+				</div>";
+		}
+	}
+}

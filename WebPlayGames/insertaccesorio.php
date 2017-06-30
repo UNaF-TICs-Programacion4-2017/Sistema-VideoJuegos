@@ -147,7 +147,11 @@
 						</table> 
                           </form>
                           <?php
-                          InsertarAccesorio();
+                          
+                          
+                         
+                          	InsertarAccesorio();
+                          
                           ?>
 						</section>
 						

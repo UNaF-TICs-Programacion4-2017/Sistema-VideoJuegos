@@ -48,7 +48,7 @@
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
 						<a href="index.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
-
+					
 					<div class="main-navigation">
 						<button class="toggle-menu"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
@@ -94,10 +94,11 @@
 									</select>
 								</span>
 								<span>
-									<input type="submit" value="Filtrar">
+									<input type="submit" value="Filtrar" name="CargarDatos">
 								</span>
+							</form>
 							</div> <!-- .filter -->
-						</form>
+						
 							<div class="pagination">
 								<a href="#" class="page-number"><i class="fa fa-angle-left"></i></a>
 								<span class="page-number current">1</span>
@@ -124,11 +125,14 @@
 								</div> 
 								-->
 								<?php 
-									FiltrarAccesorios();
+								
+								CargarProductoCompleto(3,0);
 								?>
 								
 					</div>
+				
 				</div> <!-- .container -->
+				</div>
 			</main> <!-- .main-content -->
 
 			<div class="site-footer">
