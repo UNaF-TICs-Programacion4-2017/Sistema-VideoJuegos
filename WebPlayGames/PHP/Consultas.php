@@ -620,9 +620,9 @@ function CargarProductoCompleto($A,$B)
 /////////////////////////////////
 function FIltrarNuevosProductos()
 {
-	$FechaActual = date('Ymj');
+	$FechaActual = date('Ymd');
 	$FechaLimite = strtotime ('-15 day',strtotime($FechaActual));
-	$FechaLimite = date ('Ymj',$FechaLimite);
+	$FechaLimite = date ('Ymd',$FechaLimite);
 	$oCantidad = new Conexion();
 	$oCantidad->Tabla = 'producto';
 	$oCantidad->Datos = '*';
@@ -635,7 +635,7 @@ function FIltrarNuevosProductos()
 		$oFiltro = new Conexion();
 		$oFiltro->Tabla = 'producto';
 		$oFiltro->Datos = array('precio','descripcion','nombre','imagen');	
-		$oFiltro->Condicion = "fechaingreso BETWEEN '$FechaLimite' AND '$FechaActual'";
+		$oFiltro->Condicion = "fechaingreso BETWEEN '$FechaLimite' AND '$FechaActual' ORDER BY fechaingreso DESC";
 		$Tabla = $oFiltro->ObtenerFila();
 		foreach ($Tabla as $Columnas) 
 		{

@@ -27,6 +27,13 @@ function EliminarJuego()
 	if(isset($_POST['ID_Juego']))
 	{
 		$ID_Juego = $_POST['ID_Juego'];
+		$Consulta = new Conexion();
+		$Consulta->Tabla = 'producto';
+		$Consulta->Datos = array('imagen');
+		$Consulta->Condicion = "id = $ID_Juego";
+		$Valor = $Consulta->ObtenerFila();
+		$Imagen = $Valor[0][0];
+		unlink($Imagen);
 		$oJuego = new Conexion();
 		$oJuego->Tabla = 'producto';
 		$oJuego->Condicion = "id = $ID_Juego";
@@ -38,6 +45,13 @@ function EliminarConsola()
 	if(isset($_POST['ID_Consola']))
 	{
 		$ID_Consola = $_POST['ID_Consola'];
+		$Consulta = new Conexion();
+		$Consulta->Tabla = 'producto';
+		$Consulta->Datos = array('imagen');
+		$Consulta->Condicion = "id = $ID_Juego";
+		$Valor = $Consulta->ObtenerFila();
+		$Imagen = $Valor[0][0];
+		unlink($Imagen);
 		$oConsola = new Conexion();
 		$oConsola->Tabla = 'producto';
 		$oConsola->Condicion = "id = $ID_Consola";
@@ -49,6 +63,13 @@ function EliminarAccesorio()
 	if(isset($_POST['ID_Accesorio']))
 	{
 		$ID_Accesorio = $_POST['ID_Accesorio'];
+		$Consulta = new Conexion();
+		$Consulta->Tabla = 'producto';
+		$Consulta->Datos = array('imagen');
+		$Consulta->Condicion = "id = $ID_Juego";
+		$Valor = $Consulta->ObtenerFila();
+		$Imagen = $Valor[0][0];
+		unlink($Imagen);
 		$oAccesorio = new Conexion();
 		$oAccesorio->Tabla = 'producto';
 		$oAccesorio->Condicion = "id = $ID_Accesorio";
@@ -60,6 +81,13 @@ function EliminarMercha()
 	if(isset($_POST['ID_Mercha']))
 	{
 		$ID_Mercha = $_POST['ID_Mercha'];
+		$Consulta = new Conexion();
+		$Consulta->Tabla = 'producto';
+		$Consulta->Datos = array('imagen');
+		$Consulta->Condicion = "id = $ID_Juego";
+		$Valor = $Consulta->ObtenerFila();
+		$Imagen = $Valor[0][0];
+		unlink($Imagen);
 		$oMercha = new Conexion();
 		$oMercha->Tabla = 'producto';
 		$oMercha->Condicion = "id = $ID_Mercha";
@@ -71,6 +99,13 @@ function EliminarFAccion()
 	if(isset($_POST['ID_Accion']))
 	{
 		$ID_Accion = $_POST['ID_Accion'];
+		$Consulta = new Conexion();
+		$Consulta->Tabla = 'producto';
+		$Consulta->Datos = array('imagen');
+		$Consulta->Condicion = "id = $ID_Juego";
+		$Valor = $Consulta->ObtenerFila();
+		$Imagen = $Valor[0][0];
+		unlink($Imagen);
 		$oAccion = new Conexion();
 		$oAccion->Tabla = 'producto';
 		$oAccion->Condicion = "id = $ID_Accion";
