@@ -1,6 +1,10 @@
 <?php 
 	include 'PHP/Clases.php'; 
 	session_start();
+	if(empty($_SESSION['username']))
+	{
+		header("location: index.php");
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +50,7 @@
 					</div>
 					<div class="right-section pull-right">
 						<a href="cart.php" class="cart"><i class="icon-cart"></i> 0 items in cart</a>
-						<a href="index.php">(Cerrar Sesión)</a>
+						<a href="destroy.php">(Cerrar Sesión)</a>
 					</div> <!-- .right-section -->
 
 					<div class="main-navigation">

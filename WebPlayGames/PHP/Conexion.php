@@ -150,7 +150,7 @@ class Conexion
 			{
 				$Columnas = $this->Datos;
 			}
-			if ($this->Condicion <> '') 
+			if ($this->Condicion <> "") 
 			{
 				$Consulta = "SELECT $Columnas FROM $this->Tabla WHERE $this->Condicion";
 
