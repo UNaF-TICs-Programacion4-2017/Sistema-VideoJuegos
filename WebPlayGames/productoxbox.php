@@ -121,7 +121,7 @@
 						
 						<div class="product-list">
 								
-								<?php CargarProductoCompleto(4,2); ?>
+								<?php CargarProductoCompleto(4,2,'xboxs'); ?>
 							</div> <!-- .product-list -->
 
 						<!-- <div class="pagination-bar">

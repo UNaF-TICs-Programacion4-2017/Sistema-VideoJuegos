@@ -116,7 +116,7 @@
 						<div class="product-list">
 								<?php 
 								
-								CargarProductoCompleto(1,0);
+								CargarProductoCompleto(1,0,'consolas');
 								?>
 								<!--<div class="product">
 									<div class="inner-product">

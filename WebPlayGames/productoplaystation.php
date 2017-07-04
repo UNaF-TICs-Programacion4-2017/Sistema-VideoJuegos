@@ -120,7 +120,7 @@
 						</div> <!-- .filter-bar -->
 						
 						<div class="product-list">
-								<?php CargarProductoCompleto(4,1); ?>
+								<?php CargarProductoCompleto(4,1,'plays'); ?>
 								
 
 						<!--<div class="pagination-bar">
