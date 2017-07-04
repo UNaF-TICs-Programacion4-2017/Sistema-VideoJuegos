@@ -84,7 +84,7 @@
 							<form action="" method="POST">
 								<span>
 									<label>Mostrar:</label>
-									<select name="#">
+									<select name="faccion">
 										<option value="#">8</option>
 										<option value="#">16</option>
 										<option value="#">24</option>
@@ -109,7 +109,7 @@
 						
 						<div class="product-list">
 								
-								<?php CargarProductoCompleto(5,0); ?>	
+								<?php CargarProductoCompleto(5,0,'faccion'); ?>	
 							</div> <!-- .product-list -->
 
 					<!--	<div class="pagination-bar">

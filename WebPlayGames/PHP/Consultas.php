@@ -535,7 +535,7 @@ function FiltrarFAccion()
 	}
 }
 /////////////////////////////////
-function CargarProductoCompleto($A,$B)
+function CargarProductoCompleto($A,$B,$C)
 {
 	$oCantidad = new Conexion();
 	$oCantidad->Tabla = 'producto';
@@ -544,10 +544,10 @@ function CargarProductoCompleto($A,$B)
 	$Cantidad = $oCantidad->CantidadRegistro();
 	if ($Cantidad > 0) 
 	{
-		if(!isset($_POST['consolas']))
+		if(!isset($_POST[$C]))
 		{
 			$NumeroColumnas = 0;
-			$Consola = $_POST['consolas'];
+			$Consola = $_POST[$C];
 			$oFiltro = new Conexion();
 			$oFiltro->Tabla = 'producto';
 			$oFiltro->Datos = array('precio','descripcion','nombre','imagen');	

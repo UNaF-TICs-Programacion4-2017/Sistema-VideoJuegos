@@ -130,7 +130,7 @@
 								-->
 								<?php 
 								
-								CargarProductoCompleto(3,0);
+								CargarProductoCompleto(3,0,'consolas');
 								?>
 								
 					</div>
